@@ -9,8 +9,6 @@
 *     exported to and used by any department when they need a summary and image to
 *     align responsively in an organizer layout.
 *
-*     This specific project is intended for the CDLI Gadget Finder.
-*
 *     This content type will work in conjunction with the Organizer and each item
 *     will contain one searchable, article.
 *
@@ -28,7 +26,6 @@ try {
     var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Full Article' output='normal' display_field='value' />");
     var externalLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link' output='normal' use-element='true' filename-element='External Link' modifiers='striptags,htmlentities' />");
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />");
-    var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Categories' output='normal' display_field='value' />");
     var lastModified = '<div class="lastModified" style="display:inline-block"><p>Last modified: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></p></div>'; 
     var listOfTags = "";
     var titleLink = "";
@@ -48,15 +45,6 @@ try {
     var beginningHTML = '<div class="newsItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="newsItem standardContent">';
     var endingHTML = '</div></div>';
   
-  
-    /* parse the list of tags, add <li> tags*/
-    if (fieldTags != "") {
-      var arrayOfTags = fieldTags.split(',');
-      for (let i = 0; i < arrayOfTags.length; i++) {
-        listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
-      }
-      listOfTags = '<div class="knowledgeBaseItem tags"><ul class="categories">' + listOfTags + '</ul></div>';
-    }
   
   
     /* determine which link, if any, goes in the title */
