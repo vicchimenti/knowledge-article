@@ -50,7 +50,6 @@ try {
     document.write('<div class="newsArticleHeader"><h2 class="articleTitle">' + articleTitle + '</h2></div>');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, featureImageString));
     document.write('<div class="articleText standardContent">' + articleFullBody + '</div>'); 
-    document.write(listOfTags);
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
     document.write(endingHTML);
   
