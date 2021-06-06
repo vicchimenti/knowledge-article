@@ -1,6 +1,7 @@
 /***
 *     @author Victor Chimenti, MSCS-SE '20
 *     @file v9-fulltext.js
+*     v9/fulltext
 *
 *     This new content type is a hybrid being adapted from the knowledge base
 *     content type used by IT Services and the News type available to all departments.
@@ -8,13 +9,11 @@
 *     exported to and used by any department when they need a summary and image to
 *     align responsively in an organizer layout.
 *
-*     This specific project is intended for the CDLI Gadget Finder.
-*
 *     This content layout will be the full text layout that the organizer layout links to.
 *
 *     Document will write once when the page loads
 *
-*     @version 2.1
+*     @version 3.1
 */
 
 try {
