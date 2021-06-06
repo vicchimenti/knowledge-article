@@ -1,6 +1,7 @@
   /***
 *     @author Victor Chimenti, MSCS-SE '20
 *     @file v9-organizer-articleSummary.js
+*     v9/organizer/articleSummary
 *
 *     This new content type is a hybrid being adapted from the knowledge base
 *     content type used by IT Services and the News type available to all departments.
