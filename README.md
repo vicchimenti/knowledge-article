@@ -1,1 +1,1 @@
-# knowledge-article-generic
+# Knowledge Base Article Generic
