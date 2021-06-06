@@ -1,0 +1,1 @@
+# knowledge-article-generic
