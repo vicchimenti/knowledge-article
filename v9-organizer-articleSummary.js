@@ -14,6 +14,181 @@
 *     @version 5.1.7
 */
 
+
+
+
+
+
+
+    /***
+     *      Import T4 Utilities
+     */
+     importClass(com.terminalfour.media.IMediaManager);
+     importClass(com.terminalfour.spring.ApplicationContextProvider);
+     importClass(com.terminalfour.publish.utils.BrokerUtils);
+     importClass(com.terminalfour.media.utils.ImageInfo);
+ 
+ 
+ 
+ 
+     /***
+      *      Extract values from T4 element tags
+      *      and confirm valid existing content item field
+      */
+     function getContentValues(tag) {
+         try {
+             let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
+             return {
+                 isError: false,
+                 content: _tag == '' ? null : _tag
+             };
+         } catch (error) {
+             return {
+                 isError: true,
+                 message: error.message
+             };
+         }
+     }
+ 
+ 
+ 
+ 
+     /***
+      *      Returns an array of sdg items
+      */
+     function assignSdgList(arrayOfValues) {
+ 
+         let listValues = '';
+ 
+         for (let i = 0; i < arrayOfValues.length; i++) {
+ 
+             listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i].trim() + '</li>';
+         }
+ 
+         return listValues;
+     }
+ 
+
+
+
+    /***
+      *      Returns an array of sdg items
+      */
+     function assignLsapList(arrayOfValues) {
+
+        let listValues = '';
+
+        for (let i = 0; i < arrayOfValues.length; i++) {
+
+            listValues += '<li class="list-group-item lsapIcon">' + arrayOfValues[i].trim() + '</li>';
+        }
+
+        return listValues;
+     }
+ 
+ 
+ 
+
+     /***
+      *      Returns a media object
+      */
+     function getMediaInfo(mediaID) {
+ 
+         let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+         let media = mediaManager.get(mediaID, language);
+ 
+         return media;
+     }
+ 
+ 
+ 
+ 
+     /***
+      *      Returns a media stream object
+      */
+     function readMedia(mediaID) {
+ 
+         let mediaObj = getMediaInfo(mediaID);
+         let oMediaStream = mediaObj.getMedia();
+ 
+         return oMediaStream;
+     }
+ 
+ 
+ 
+ 
+     /***
+      *      Returns a formatted html img tag
+      */
+     function mediaTag(itemId) {
+ 
+        // media path would be a good place to route through get content values to check for nulls and return a detailed error code
+         let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
+         let mediaInfo = getMediaInfo(itemId);
+         let media = readMedia(itemId);
+         let info = new ImageInfo();
+         info.setInput(media);
+ 
+         let mediaHTML = (info.check()) ?
+             '<figure class="figure"><img src="' + mediaPath + '" class="listgroupImage figure-img img-fluid" title="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure><figcaption class="figure-caption visually-hidden hidden">' + mediaInfo.getName() + '</figcaption>' :
+             '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
+ 
+         return mediaHTML;
+     }
+ 
+ 
+ 
+ 
+     /***
+      *      Returns a formatted html img tag
+      */
+     function getTarget(itemId) {
+ 
+         let mediaInfo = getMediaInfo(itemId);
+         let media = readMedia(itemId);
+         let info = new ImageInfo();
+         info.setInput(media);
+ 
+         let target = (info.check()) ? '' + mediaInfo.getName() + '' : null;
+ 
+         return target;
+     }
+ 
+ 
+ 
+ 
+     /***
+      *      Returns an array of list items
+      */
+     function formatTargets(arrayOfValues) {
+ 
+         let listValues = '';
+ 
+         for (let i = 0; i < arrayOfValues.length; i++) {
+ 
+             if (arrayOfValues[i]) {
+                 let cleanValue = arrayOfValues[i].replace(/\s/g, '-');
+                 listValues += '' + cleanValue.trim() + ' ';
+             }
+         }
+ 
+         return listValues;
+     }
+
+ 
+ 
+ 
+     /***
+      *      Write the document
+      */
+     function writeDocument(array) {
+ 
+         for (let i = 0; i < array.length; i++) {
+ 
+             document.write(array[i]);
+         }
+     }
+
 try {
     /* -- Assign all the things -- */
     var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Title' output='normal' display_field='value' />"); 
