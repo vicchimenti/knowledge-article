@@ -3,18 +3,15 @@
 *     @file v9-organizer-articleSummary.js
 *     v9/organizer/articleSummary
 *
-*     This new content type is a hybrid being adapted from the knowledge base
-*     content type used by IT Services and the News type available to all departments.
-*     It is intended to provide a searchable, sortable group of articles that can be
-*     exported to and used by any department when they need a summary and image to
-*     align responsively in an organizer layout.
+*     This new content type is a generic knowledge base article that can be used
+*     in a variety of environments that require tagged/filterable content.
 *
-*     This content type will work in conjunction with the Organizer and each item
-*     will contain one searchable, article.
+*     This content type will work in conjunction with the Organizer Zone-A
+*     and each item will contain one searchable, article.
 *
 *     Document will write once when the page loads
 *
-*     @version 5.1
+*     @version 5.1.1
 */
 
 try {
