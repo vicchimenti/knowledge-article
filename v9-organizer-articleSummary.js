@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 5.1.2
+*     @version 5.1.3
 */
 
 try {
@@ -39,7 +39,7 @@ try {
   
   
     /* -- Prepare all the things -- */
-    var beginningHTML = '<article class="newsItemWrapper" aria-label="' + articleTitle + '" id="id' + contentID + '"><div class="newsItem standardContent">';
+    var beginningHTML = '<article class="newsItemWrapper card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + articleTitle + '" id="id' + contentID + '"><div class="newsItem standardContent">';
     var endingHTML = '</div></article>';
   
   
