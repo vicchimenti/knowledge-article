@@ -29,34 +29,34 @@
 }
 
 
-.newsItem {
+.knowledgeItem {
     clear: both;
 }
 
-.newsItem h3 {
+.knowledgeItem h3 {
     margin: 0;
     padding: 0 0 15px 0;
 }
 
-.newsItem .newsImage {
+.knowledgeItem .newsImage {
     float: left;
     margin-right: 15px;
     max-width: 25%;
 }
 
-.newsItem .newsImage img {
+.knowledgeItem .newsImage img {
     padding: 0;
 }
 
-.newsItem .articleSummary p {
+.knowledgeItem .articleSummary p {
     margin-bottom: 0;
 }
 
-.newsItem .articleSummary em.publishDate {
+.knowledgeItem .articleSummary em.publishDate {
     color: #333333;
 }
 
-.newsItem .articleSummary p.readmore {
+.knowledgeItem .articleSummary p.readmore {
     margin: 15px 0 0 0;
     text-align: left;
     text-transform: initial;
