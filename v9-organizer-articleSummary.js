@@ -217,6 +217,77 @@ try {
 
         };
 
+
+
+                 /***
+          *  Parse and format sdg icons
+          * 
+          * */
+                  if (cejscDict.icons.content) {
+ 
+                    let iconArray = cejscDict.icons.content.split(',');
+                    let iconPathArray = [];
+       
+                    iconArray.sort();
+        
+                    for (let icon in iconArray) {
+        
+                        iconPathArray[icon] = mediaTag(iconArray[icon].trim());
+                    }
+        
+                    let iconValues = assignSdgList(iconPathArray);
+                    listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+                }
+       
+       
+       
+       
+               /***
+                 *  Parse and format lsap icons
+                 * 
+                 * */
+               if (cejscDict.lsapIcons.content) {
+       
+                   let iconArray = cejscDict.lsapIcons.content.split(',');
+                   let iconPathArray = [];
+       
+                   iconArray.sort();
+       
+                   for (let icon in iconArray) {
+       
+                       iconPathArray[icon] = mediaTag(iconArray[icon].trim());
+                   }
+       
+                   let iconValues = assignLsapList(iconPathArray);
+                   listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+               }
+       
+       
+        
+          
+                /***
+                 *  write document once
+                 * 
+                 * */
+                writeDocument(
+                    [
+                        beginningHTML,
+                        openCardHeader,
+                        titleLink,
+                        subtitleString,
+                        closeCardHeader,
+                        openBodyWrapper,
+                        summaryString,
+                        listOfLsapIcons,
+                        listOfIcons,
+                        sectionIdString,
+                        closeBodyWrapper,
+                        endingHTML
+                    ]
+                );
+
+                
+
     /* -- Assign all the things -- */
     var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Title' output='normal' display_field='value' />"); 
     var thumbnailImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Image' output='normal' formatter='path/*' />");
