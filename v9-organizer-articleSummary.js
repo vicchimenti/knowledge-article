@@ -1,7 +1,7 @@
   /***
 *     @author Victor Chimenti, MSCS
 *     @file v9-organizer-articleSummary.js
-*     v9/organizer/articleSummary
+*           v9/organizer/articleSummary
 *
 *     This new content type is a generic knowledge base article that can be used
 *     in a variety of environments that require tagged/filterable content.
