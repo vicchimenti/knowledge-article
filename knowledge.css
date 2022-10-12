@@ -38,13 +38,13 @@
     padding: 0 0 15px 0;
 }
 
-.knowledgeItem .newsImage {
+.knowledgeItem .knowledgeImage {
     float: left;
     margin-right: 15px;
     max-width: 25%;
 }
 
-.knowledgeItem .newsImage img {
+.knowledgeItem .knowledgeImage img {
     padding: 0;
 }
 
