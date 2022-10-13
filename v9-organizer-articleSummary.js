@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 5.1.7
+*     @version 6.0.1
 */
 
 
@@ -305,7 +305,7 @@ try {
   
   
     /* -- Prepare all the things -- */
-    var beginningHTML = '<article class="knowledgeArticle card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + articleTitle + '" id="id' + contentID + '"><div class="knowledgeItem standardContent">';
+    var beginningHTML = '<article class="knowledgeArticle card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + knowledgeDict.articleTitle.content + '" id="id' + knowledgeDict.contentId.content + '"><div class="knowledgeItem standardContent">';
     var endingHTML = '</div></article>';
   
   
@@ -336,8 +336,8 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="articleDescription">');
-    document.write('<div class="summary"><p>' + articleDescription + '</p></div>')
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
+    document.write('<div class="summary"><p>' + knowledgeDict.articleDescription.content + '</p></div>')
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
     document.write('</div>'); // close articleDescription
     document.write(endingHTML);
   
