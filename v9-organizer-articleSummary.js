@@ -321,11 +321,11 @@ try {
     /* determine which link, if any, goes on the image */
     if (knowledgeDict.linkSource.content && knowledgeDict.articleImage.content) {
 
-        thumbNailString = '<div class="knowledgeImage"><a href="' + externalLink + '" target="_blank"><img src="' + articleImage + '" class="articleImage" alt="' + altarticleImage + '" /></a></div>';
+        thumbNailString = '<div class="knowledgeImage"><a href="' + knowledgeDict.linkSource.content + '" target="_blank"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></a></div>';
 
     } else {
 
-        thumbNailString = '<div class="knowledgeImage"><img src="' + articleImage + '" class="articleImage" alt="' + altarticleImage + '" /></div>';
+        thumbNailString = '<div class="knowledgeImage"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></div>';
 
     }
     
