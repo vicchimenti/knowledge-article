@@ -311,15 +311,15 @@ try {
   
   
     /* determine which link, if any, goes in the title */
-    if (articleFullBody == "") {
-        titleLink = "<h3>" + articleTitle + "</h3>";
+    if (!knowledgeDict.articleFullBody.content) {
+        titleLink = "<h3>" + knowledgeDict.articleTitle.content + "</h3>";
     } else {
-        titleLink = '<h3><a href="' + fullTextLink + '">' + articleTitle + '</a></h3>';
+        titleLink = '<h3><a href="' + knowledgeDict.fullTextLink.content + '">' + knowledgeDict.articleTitle.content + '</a></h3>';
     }
   
   
     /* determine which link, if any, goes on the image */
-    if (externalLink == "") {
+    if (!knowledgeDict.linkSource.content) {
         thumbNailString = '<div class="knowledgeImage"><img src="' + articleImage + '" class="articleImage" alt="' + altarticleImage + '" /></div>';
     } else {
         thumbNailString = '<div class="knowledgeImage"><a href="' + externalLink + '" target="_blank"><img src="' + articleImage + '" class="articleImage" alt="' + altarticleImage + '" /></a></div>';
