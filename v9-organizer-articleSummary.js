@@ -203,6 +203,7 @@ try {
  
             contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
             articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
+            articleSubtitle: getContentValues('<t4 type="content" name="Subtitle" output="normal" modifiers="striptags,htmlentities" />'),
             articleImage: getContentValues('<t4 type="content" name="Image" output="normal" formatter="path/*" />'),
             articleDescription: getContentValues('<t4 type="content" name="Description" output="normal" modifiers="striptags,htmlentities" />'),
             articleFullBody: getContentValues('<t4 type="content" name="Full Article" output="normal" modifiers="medialibrary,nav_sections" />'),
