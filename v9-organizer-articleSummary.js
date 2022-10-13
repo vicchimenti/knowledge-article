@@ -199,7 +199,7 @@ try {
          /***
           *      Dictionary of content
           * */
-          let cejscDict = {
+          let knowledgeDict = {
  
             contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
             articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
