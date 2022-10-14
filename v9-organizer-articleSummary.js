@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.0.1
+*     @version 6.0.2
 */
 
 
