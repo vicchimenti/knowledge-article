@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.0.2
+*     @version 6.0.3
 */
 
 
@@ -236,9 +236,9 @@ try {
      *  and process valid media id
      * 
      * */
-     let imageIdTest = (knowledgeDict.articleImage.content) ?
-          '<span>Image ID: ' + knowledgeDict.articleImage.content.getID() + '</span>' :
-          '<span>Image ID: Attempt Failed</span>';
+    //  let imageIdTest = (knowledgeDict.articleImage.content) ?
+    //       '<span>Image ID: ' + knowledgeDict.articleImage.content.getID() + '</span>' :
+    //       '<span>Image ID: Attempt Failed</span>';
 
 
 
@@ -366,7 +366,7 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="articleDescription">');
     document.write('<div class="summary"><p>' + knowledgeDict.articleDescription.content + '</p></div>');
-    document.write(imageIdTest);
+    // document.write(imageIdTest);
 
     
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
