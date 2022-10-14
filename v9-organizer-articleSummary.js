@@ -236,6 +236,12 @@ try {
      *  and process valid media id
      * 
      * */
+     let imageIdTest = (knowledgeDict.articleImage.content) ?
+          '<span>Image ID: ' + knowledgeDict.articleImage.content.getID() + '</span>' :
+          '<span>Image ID: Attempt Failed</span>';
+
+
+
     //      let imageString = (expertsDict.primaryImage.content) ?
     //      '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" alt="' + expertsDict.contentName.content + '" loading="auto" /></span>' :
     //      '<span class="expertsImage hidden visually-hidden">No Image Provided</span>';
@@ -359,7 +365,10 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="articleDescription">');
-    document.write('<div class="summary"><p>' + knowledgeDict.articleDescription.content + '</p></div>')
+    document.write('<div class="summary"><p>' + knowledgeDict.articleDescription.content + '</p></div>');
+    document.write(imageIdTest);
+
+    
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
     document.write('</div>'); // close articleDescription
     document.write(endingHTML);
