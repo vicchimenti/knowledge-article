@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.9
+*     @version 6.2.10
 */
 
 
@@ -247,6 +247,17 @@ try {
      *  Description
      * 
      * */
+    let subtitleString = (knowledgeDict.articleSubtitle.content) ?
+        '<p class="articleSubtitle card-text"><strong>' + knowledgeDict.articleSubtitle.content + '</strong></p>' :
+        '<span class="articleSubtitle d-none hidden visually-hidden">No subtitle entered</span>';
+
+
+
+
+    /***
+     *  Description
+     * 
+     * */
     let linkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
         '<p class="externalLink card-text"><a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a></p>' :
         '<span class="externalLink d-none hidden visually-hidden">No link entered</span>';
@@ -313,12 +324,6 @@ try {
     
 
     
-  
-  
-
-
-
-
     /***
      *  write document once
      * 
@@ -336,6 +341,7 @@ try {
             closeImageWrapper,
             openDescriptionWrapper,
             linkString,
+            subtitleString,
             descriptionString,
             closeDescriptionWrapper,
             closeRow,
