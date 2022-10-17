@@ -19,6 +19,7 @@
 
 
 
+// content: _tag == '' ? null : _tag
 
 
 
@@ -42,7 +43,7 @@
              let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
              return {
                  isError: false,
-                 content: _tag == '' ? null : _tag
+                 content: _tag !== '' ? _tag : null 
              };
          } catch (error) {
              return {
@@ -120,23 +121,16 @@
  
  
      /***
-      *      Returns a formatted html img tag
+      *      Returns a formatted html a href file download tag
       */
      function mediaTag(itemId) {
  
-        // media path would be a good place to route through get content values to check for nulls and return a detailed error code
          let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
          let mediaInfo = getMediaInfo(itemId);
-         let media = readMedia(itemId);
-         let info = new ImageInfo();
-         info.setInput(media);
  
          let mediaHTML = (mediaInfo) ?
             '<h4 class="card-text"><a class="mediaDownload card-link" href="' + mediaPath + '" title="Read the full document: ' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" download>' + mediaInfo.getName() + '</a></h4>' :
             '<span class="mediaDownload d-none visually-hidden hidden">Invalid Media ID</span>';
-
-            //  '<figure class="figure"><img src="' + mediaPath + '" class="listgroupImage figure-img img-fluid" title="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure><figcaption class="figure-caption visually-hidden hidden">' + mediaInfo.getName() + '</figcaption>' :
-            //  '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
  
          return mediaHTML;
      }
@@ -147,9 +141,8 @@
     /***
       *      Returns a formatted html img tag
       */
-      function imageTag(itemId) {
+     function imageTag(itemId) {
 
-        // media path would be a good place to route through get content values to check for nulls and return a detailed error code
         let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
         let mediaInfo = getMediaInfo(itemId);
         let media = readMedia(itemId);
@@ -161,7 +154,7 @@
             '<figure class="d-none hidden visually-hidden"><span class="class="articleImage visually-hidden hidden">Invalid Image ID</span></figure>';
 
         return mediaHTML;
-      }
+     }
  
  
  
