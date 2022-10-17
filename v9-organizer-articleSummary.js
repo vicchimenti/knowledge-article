@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.13
+*     @version 6.2.14
 */
 
 
@@ -343,11 +343,11 @@ try {
             linkString,
             subtitleString,
             descriptionString,
-            mediaFileString,
             closeDescriptionWrapper,
             closeRow,
             closeBody,
             openFooter,
+            mediaFileString,
             topicString,
             lastModifiedString,
             closeFooter,
