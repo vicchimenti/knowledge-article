@@ -397,6 +397,8 @@ try {
 
     } else {
 
+        openImageWrapper = '<div class="knowledgeImage d-none hidden visually-hidden">';
+        openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-12">';
         thumbNailString = '<span class="articleImage d-none hidden visually-hidden">No Image Provided</span>';
 
     }
