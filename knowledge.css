@@ -19,6 +19,12 @@
     padding: 0;
 }
 
+.knowledgeArticle .lastModified .text-muted {
+    /* color: #777; */
+    color: #807060;
+    font-weight: 400;
+}
+
 @media screen and (max-width: 991.99px) {
     .knowledgeArticle.card {
         padding-right: 15px;
