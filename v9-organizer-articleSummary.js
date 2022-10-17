@@ -344,6 +344,16 @@ try {
 
 
     /***
+     *  Description
+     * 
+     * */
+    let descriptionString = (knowledgeDict.articleDescription.content) ?
+        '<p class="articleDescription card-text">' + knowledgeDict.articleDescription.content + '</p>' :
+        '<span class="articleDescription d-none hidden visually-hidden">No description entered</span>';
+
+
+
+    /***
      *  Format Last Modified
      * 
      * */
@@ -393,9 +403,11 @@ try {
   
   
     /* -- Write all the things -- */
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
+    document.write(beginningHTML);
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(openHeader);
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
+    document.write(titleLink);
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(closeHeader);
     document.write(openBody);
     document.write(openRow);
@@ -404,7 +416,8 @@ try {
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write(closeImageWrapper);
     document.write(openDescriptionWrapper);
-    document.write('<p class="card-text">' + knowledgeDict.articleDescription.content + '</p>');
+    document.write(descriptionString);
+    // document.write('<p class="card-text">' + knowledgeDict.articleDescription.content + '</p>');
     document.write(closeDescriptionWrapper);
     document.write(closeRow);
     document.write(closeBody);
