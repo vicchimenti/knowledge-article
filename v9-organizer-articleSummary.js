@@ -176,7 +176,7 @@ try {
         articleDescription: getContentValues('<t4 type="content" name="Description" output="normal" modifiers="striptags,htmlentities" />'),
         articleFullBody: getContentValues('<t4 type="content" name="Full Article" output="normal" modifiers="medialibrary,nav_sections" />'),
         topics: getContentValues('<t4 type="content" name="Topics" output="normal" modifiers="striptags,htmlentities" />'),
-        linkSource: getContentValues('<t4 type="content" name="Link" output="normal" modifiers="nav_sections" />'),
+        linkSource: getContentValues('<t4 type="content" name="Link" output="linkurl" modifiers="nav_sections" />'),
         linkText: getContentValues('<t4 type="content" name="Link" output="linktext" modifiers="nav_sections" />'),
         mediaFile: getContentValues('<t4 type="content" name="Media File" output="normal" formatter="path/*" />'),
         fullTextLink: getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
