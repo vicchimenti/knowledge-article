@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.1.2
+*     @version 6.1.3
 */
 
 
@@ -348,7 +348,6 @@ try {
     let openFooter = '<div class="card-footer border-0 bg-transparent">';
     let closeFooter = '</div>';
 
-    lastModified
 
     /***
      *  Set wrapper
@@ -405,6 +404,7 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="articleDescription">');
     document.write('<div class="summary"><p>' + knowledgeDict.articleDescription.content + '</p></div>');
+    document.write('</div>'); // close articleDescription
     document.write(closeBody);
     document.write(openFooter);
     document.write(lastModifiedString);
@@ -413,7 +413,7 @@ try {
 
     
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
-    document.write('</div>'); // close articleDescription
+    
     document.write(endingHTML);
   
   
