@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.1.4
+*     @version 6.1.5
 */
 
 
@@ -385,11 +385,11 @@ try {
     /* determine which link, if any, goes on the image */
     if (knowledgeDict.linkSource.content && knowledgeDict.articleImage.content) {
 
-        thumbNailString = '<div class="knowledgeImage"><a href="' + knowledgeDict.linkSource.content + '" target="_blank"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></a></div>';
+        thumbNailString = '<div class="knowledgeImage col-xs-12 col-md-4"><a href="' + knowledgeDict.linkSource.content + '" target="_blank"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></a></div>';
 
     } else {
 
-        thumbNailString = '<div class="knowledgeImage"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></div>';
+        thumbNailString = '<div class="knowledgeImagecol-xs-12 col-md-4"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></div>';
 
     }
     
@@ -403,8 +403,8 @@ try {
     document.write(openBody);
     document.write(openRow);
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
-    document.write('<div class="articleDescription">');
-    document.write('<div class="summary"><p>' + knowledgeDict.articleDescription.content + '</p></div>');
+    document.write('<div class="articleDescription col-xs-12 col-md-8">');
+    document.write('<div class="summary col-12"><p>' + knowledgeDict.articleDescription.content + '</p></div>');
     document.write('</div>'); // close articleDescription
     document.write(closeRow);
     document.write(closeBody);
