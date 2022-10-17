@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.5
+*     @version 6.2.6
 */
 
 
@@ -57,18 +57,29 @@
  
  
      /***
-      *      Returns an array of sdg items
+      *         Returns an formatted unordered list
       */
-     function assignSdgList(arrayOfValues) {
+
+    //   if (fieldTags != "") {
+    //     var arrayOfTags = fieldTags.split(',');
+    //     for (let i = 0; i < arrayOfTags.length; i++) {
+    //       listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
+    //     }
+    //     listOfTags = '<div class="knowledgeBaseItem tags"><ul class="categories">' + listOfTags + '</ul></div>';
+    //   }
+     function assignList(tags) {
+
+        let arrayofTags = tags.split(',');
  
          let listValues = '';
- 
-         for (let i = 0; i < arrayOfValues.length; i++) {
- 
-             listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i].trim() + '</li>';
+
+         for (const tag of arrayofTags) {
+             
+            listValues += '<li class="tag">' + tag.trim() + '</li>';
          }
  
-         return listValues;
+ 
+         return '<div class="knowledgeBaseItem tags"><ul class="categories">' + listValues + '</ul></div>';
      }
  
 
@@ -221,38 +232,9 @@ try {
 
 
 
-
-
-
-
-        /***
-          *  Parse and format sdg icons
-          * 
-          * */
-        //   if (cejscDict.icons.content) {
-
-        //     let iconArray = cejscDict.icons.content.split(',');
-        //     let iconPathArray = [];
-
-        //     iconArray.sort();
-
-        //     for (let icon in iconArray) {
-
-        //         iconPathArray[icon] = mediaTag(iconArray[icon].trim());
-        //     }
-
-        //     let iconValues = assignSdgList(iconPathArray);
-        //     listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
-        // }
-       
        
         
-          
-
-
-                
-
-
+        
 
   
   
@@ -356,6 +338,42 @@ try {
 
 
 
+
+    // if (fieldTags != "") {
+    //     var arrayOfTags = fieldTags.split(',');
+    //     for (let i = 0; i < arrayOfTags.length; i++) {
+    //       listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
+    //     }
+    //     listOfTags = '<div class="knowledgeBaseItem tags"><ul class="categories">' + listOfTags + '</ul></div>';
+    //   }
+
+    /***
+     *  Parse and format list items
+     * 
+     * */
+    let topicString = (knowledgeDict.topics.content) ?
+        assignList(knowledgeDict.topics.content) :
+        '<span class="knowledgeBaseItem tags d-none hidden visually-hidden">No Topics Provided</span>';
+     
+    
+    
+    // if (knowledgeDict.topics.content) {
+
+    //     let topicArray = knowledgeDict.topics.content.split(',');
+    //     let iconPathArray = [];
+
+    //     iconArray.sort();
+
+    //     for (let icon in iconArray) {
+
+    //         iconPathArray[icon] = mediaTag(iconArray[icon].trim());
+    //     }
+
+    //     let iconValues = assignSdgList(iconPathArray);
+    //     listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+    //  }
+       
+    //  '<div class="knowledgeBaseItem tags"><ul class="categories">' + listValues + '</ul></div>';
     
   
   
@@ -386,6 +404,7 @@ try {
             openFooter,
             lastModifiedString,
             mediaFileString,
+            topicString,
             closeFooter,
             endingHTML
         ]
