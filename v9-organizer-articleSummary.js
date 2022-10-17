@@ -296,7 +296,6 @@ try {
     let closeImageWrapper = '</div>';
     let openDescriptionWrapper = '<div class="descriptionWrapper col-xs-12 col-md-8">';
     let closeDescriptionWrapper = '</div>';
-    let thumbNailString = "";
 
 
 
