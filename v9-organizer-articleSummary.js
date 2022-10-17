@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.1.14
+*     @version 6.1.15
 */
 
 
@@ -154,7 +154,7 @@
         info.setInput(media);
 
         let mediaHTML = (info.check()) ?
-            '<figure class="figure"><img src="' + mediaPath + '" class="class="articleImage figure-img img-fluid" title="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure>' :
+            '<figure class="figure"><img src="' + mediaPath + '" class="articleImage figure-img img-fluid" title="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure>' :
             '<span class="class="articleImage visually-hidden hidden">Invalid Image ID</span>';
 
         return mediaHTML;
@@ -461,7 +461,7 @@ try {
      * 
      * */
     let mediaFileId = (knowledgeDict.articleImage.content) ? content.get('Image').getID() : null;
-    let imageString = (mediaFileId) ? imageTag() : '<span class="articleImage d-none hidden visually-hidden">No valid image provided</span>';
+    let imageString = (mediaFileId) ? imageTag(mediaFileId) : '<span class="articleImage d-none hidden visually-hidden">No valid image provided</span>';
 
     
   
@@ -474,7 +474,8 @@ try {
     document.write(openBody);
     document.write(openRow);
     document.write(openImageWrapper);
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
+    document.write(imageString);
+    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write(closeImageWrapper);
     document.write(openDescriptionWrapper);
     document.write('<p class="card-text">' + knowledgeDict.articleDescription.content + '</p>');
