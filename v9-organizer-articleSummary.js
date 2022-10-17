@@ -210,7 +210,6 @@ try {
             topics: getContentValues('<t4 type="content" name="Topics" output="normal" modifiers="striptags,htmlentities" />'),
             linkSource: getContentValues('<t4 type="content" name="Link" output="normal" modifiers="nav_sections" />'),
             linkText: getContentValues('<t4 type="content" name="Link" output="linktext" modifiers="nav_sections" />'),
-            // pdfFile: getContentValues('<t4 type="content" name="PDF" output="file" />'),
             mediaFile: getContentValues('<t4 type="content" name="Media File" output="normal" formatter="path/*" />'),
             fullTextLink: getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
             lastModified: getContentValues('<t4 type="meta" meta="last_modified" format="EEEE, MMMM d, yyyy" />'),
@@ -398,9 +397,6 @@ try {
         '<p><a class="mediaDownload card-link" href="' + knowledgeDict.mediaFile.content + '" title="' + knowledgeDict.contentName.content + '" download>' + knowledgeDict.contentName.content + '</a></p>' :
         '<span class="d-none">No File Provided</span>';
 
-    // let pdfFileString = (knowledgeDict.pdfFile.content) ?
-    //     '<p><a class="pdfDownload card-link" href="' + knowledgeDict.pdfFile.content + '" title="' + knowledgeDict.contentName.content + '" download>' + knowledgeDict.contentName.content + '</a></p>' :
-    //     '<span class="d-none">No File Provided</span>';
 
 
 
@@ -453,7 +449,6 @@ try {
     document.write(openFooter);
     document.write(lastModifiedString);
     document.write(mediaFileString);
-    // document.write(pdfFileString);
 
     document.write(closeFooter);
     
