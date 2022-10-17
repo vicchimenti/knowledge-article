@@ -442,36 +442,6 @@ try {
 
 
 
-  
-  
-  
-    /* determine which link, if any, goes in the title */
-    // if (!knowledgeDict.articleFullBody.content) {
-    //     titleLink = '<h3 class="card-title">' + knowledgeDict.articleTitle.content + '</h3>';
-    // } else {
-    //     titleLink = '<h3 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link">' + knowledgeDict.articleTitle.content + '</a></h3>';
-    // }
-  
-  
-    /* determine which link, if any, goes on the image */
-    // if (knowledgeDict.linkSource.content && knowledgeDict.articleImage.content) {
-
-    //     thumbNailString = '<a href="' + knowledgeDict.linkSource.content + '" target="_blank"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></a>';
-
-    // } else if (knowledgeDict.articleImage.content) {
-
-    //     thumbNailString = '<img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" />';
-
-    // } else {
-
-    //     openImageWrapper = '<div class="knowledgeImage d-none hidden visually-hidden">';
-    //     openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-12">';
-    //     thumbNailString = '<span class="articleImage d-none hidden visually-hidden">No Image Provided</span>';
-
-    // }
-
-
-
 
 
     /***
