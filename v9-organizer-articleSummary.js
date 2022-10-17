@@ -461,7 +461,8 @@ try {
      * 
      * */
     let mediaFileId = (knowledgeDict.articleImage.content) ? content.get('Image').getID() : null;
-    let imageString = (mediaFileId) ? imageTag(mediaFileId) : '<span class="articleImage d-none hidden visually-hidden">No valid image provided</span>';
+    let imageMarkup = (mediaFileId) ? imageTag(mediaFileId) : null;
+    let imageString = imageMarkup || '<span class="articleImage d-none hidden visually-hidden">No valid image provided</span>';
 
     
   
