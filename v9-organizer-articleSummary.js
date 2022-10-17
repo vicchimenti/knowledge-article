@@ -434,9 +434,10 @@ try {
      *  Parse for Media Library File
      * 
      * */
-    let mediaFileString = (knowledgeDict.mediaFile.content) ?
-        '<p><a class="mediaDownload card-link" href="' + knowledgeDict.mediaFile.content + '" title="' + knowledgeDict.contentName.content + '" download>' + knowledgeDict.contentName.content + '</a></p>' :
-        '<span class="d-none">No File Provided</span>';
+     let mediaFileId = (knowledgeDict.mediaFile.content) ? content.get('Media File').getID() : null;
+     let mediaFileString = (mediaFileId) ? mediaTag(mediaFileId) : '<span class="d-none">No File Provided</span>';
+        // '<p><a class="mediaDownload card-link" href="' + knowledgeDict.mediaFile.content + '" title="' + knowledgeDict.contentName.content + '" download>' + knowledgeDict.contentName.content + '</a></p>' :
+        // '<span class="d-none">No File Provided</span>';
 
 
 
