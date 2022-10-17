@@ -271,26 +271,7 @@ try {
        
         
           
-                /***
-                 *  write document once
-                 * 
-                 * */
-                // writeDocument(
-                //     [
-                //         beginningHTML,
-                //         openCardHeader,
-                //         titleLink,
-                //         subtitleString,
-                //         closeCardHeader,
-                //         openBodyWrapper,
-                //         summaryString,
-                //         listOfLsapIcons,
-                //         listOfIcons,
-                //         sectionIdString,
-                //         closeBodyWrapper,
-                //         endingHTML
-                //     ]
-                // );
+
 
                 
 
@@ -403,31 +384,61 @@ try {
   
   
     /* -- Write all the things -- */
-    document.write(beginningHTML);
+    // document.write(beginningHTML);
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    document.write(openHeader);
-    document.write(titleLink);
+    // document.write(openHeader);
+    // document.write(titleLink);
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write(closeHeader);
-    document.write(openBody);
-    document.write(openRow);
-    document.write(openImageWrapper);
-    document.write(imageString);
+    // document.write(closeHeader);
+    // document.write(openBody);
+    // document.write(openRow);
+    // document.write(openImageWrapper);
+    // document.write(imageString);
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
-    document.write(closeImageWrapper);
-    document.write(openDescriptionWrapper);
-    document.write(descriptionString);
+    // document.write(closeImageWrapper);
+    // document.write(openDescriptionWrapper);
+    // document.write(descriptionString);
     // document.write('<p class="card-text">' + knowledgeDict.articleDescription.content + '</p>');
-    document.write(closeDescriptionWrapper);
-    document.write(closeRow);
-    document.write(closeBody);
-    document.write(openFooter);
-    document.write(lastModifiedString);
-    document.write(mediaFileString);
+    // document.write(closeDescriptionWrapper);
+    // document.write(closeRow);
+    // document.write(closeBody);
+    // document.write(openFooter);
+    // document.write(lastModifiedString);
+    // document.write(mediaFileString);
 
-    document.write(closeFooter);
+    // document.write(closeFooter);
     
-    document.write(endingHTML);
+    // document.write(endingHTML);
+
+
+
+    /***
+     *  write document once
+     * 
+     * */
+    writeDocument(
+        [
+            beginningHTML,
+            openHeader,
+            titleLink,
+            closeHeader,
+            openBody,
+            openRow,
+            openImageWrapper,
+            imageString,
+            closeImageWrapper,
+            openDescriptionWrapper,
+            descriptionString,
+            closeDescriptionWrapper,
+            closeRow,
+            closeBody,
+            openFooter,
+            lastModifiedString,
+            mediaFileString,
+            closeFooter,
+            endingHTML
+        ]
+    );
   
   
     
