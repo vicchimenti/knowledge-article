@@ -131,8 +131,8 @@
          let info = new ImageInfo();
          info.setInput(media);
  
-         let mediaHTML = (info.check()) ?
-            '<a class="mediaDownload card-link" href="' + mediaPath + '" title="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" download>' :
+         let mediaHTML = (mediaInfo) ?
+            '<p class="card-text"><a class="mediaDownload card-link" href="' + mediaPath + '" title="Read the full document: ' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" download>' + mediaInfo.getName() + '</a></p>' :
             '<span class="mediaDownload d-none visually-hidden hidden">Invalid Media ID</span>';
 
             //  '<figure class="figure"><img src="' + mediaPath + '" class="listgroupImage figure-img img-fluid" title="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure><figcaption class="figure-caption visually-hidden hidden">' + mediaInfo.getName() + '</figcaption>' :
