@@ -401,10 +401,12 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(closeHeader);
     document.write(openBody);
+    document.write(openRow);
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="articleDescription">');
     document.write('<div class="summary"><p>' + knowledgeDict.articleDescription.content + '</p></div>');
     document.write('</div>'); // close articleDescription
+    document.write(closeRow);
     document.write(closeBody);
     document.write(openFooter);
     document.write(lastModifiedString);
