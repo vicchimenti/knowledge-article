@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.2
+*     @version 6.2.3
 */
 
 
@@ -313,7 +313,7 @@ try {
     let closeFooter = '</div>';
     let openImageWrapper = '<div class="knowledgeImage col-xs-12 col-md-4">';
     let closeImageWrapper = '</div>';
-    let openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-8">';
+    let openDescriptionWrapper = '<div class="descriptionWrapper col-xs-12 col-md-8">';
     let closeDescriptionWrapper = '</div>';
     let thumbNailString = "";
 
@@ -327,7 +327,7 @@ try {
     function processBodyWrapper() {
 
         openImageWrapper = '<div class="knowledgeImage d-none hidden visually-hidden">';
-        openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-12">';
+        openDescriptionWrapper = '<div class="descriptionWrapper col-xs-12 col-md-12">';
     }
 
 
