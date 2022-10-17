@@ -383,32 +383,7 @@ try {
     
   
   
-    /* -- Write all the things -- */
-    // document.write(beginningHTML);
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    // document.write(openHeader);
-    // document.write(titleLink);
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    // document.write(closeHeader);
-    // document.write(openBody);
-    // document.write(openRow);
-    // document.write(openImageWrapper);
-    // document.write(imageString);
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
-    // document.write(closeImageWrapper);
-    // document.write(openDescriptionWrapper);
-    // document.write(descriptionString);
-    // document.write('<p class="card-text">' + knowledgeDict.articleDescription.content + '</p>');
-    // document.write(closeDescriptionWrapper);
-    // document.write(closeRow);
-    // document.write(closeBody);
-    // document.write(openFooter);
-    // document.write(lastModifiedString);
-    // document.write(mediaFileString);
 
-    // document.write(closeFooter);
-    
-    // document.write(endingHTML);
 
 
 
