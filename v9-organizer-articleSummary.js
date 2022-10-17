@@ -343,7 +343,8 @@ try {
     let closeRow = '</div>';
     let openHeader = '<div class="card-header border-0 bg-transparent">';
     let closeHeader = '</div>';
-
+    let openBody = '<div class="card-body">';
+    let closeBody = '</div>';
 
 
 
