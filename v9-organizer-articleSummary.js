@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.1.5
+*     @version 6.1.6
 */
 
 
@@ -387,9 +387,13 @@ try {
 
         thumbNailString = '<div class="knowledgeImage col-xs-12 col-md-4"><a href="' + knowledgeDict.linkSource.content + '" target="_blank"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></a></div>';
 
-    } else {
+    } else if (knowledgeDict.articleImage.content) {
 
         thumbNailString = '<div class="knowledgeImage col-xs-12 col-md-4"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></div>';
+
+    } else {
+
+        thumbNailString = '<div class="knowledgeImage col-xs-12 col-md-4 d-none hidden visually-hidden">No Image Provided</div>';
 
     }
     
