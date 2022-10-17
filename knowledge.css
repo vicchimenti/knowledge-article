@@ -15,6 +15,25 @@
     text-decoration: underline;
 }
 
+.knowledgeArticle .externalLink a:focus {
+    text-decoration: underline;
+}
+
+.knowledgeArticle a.mediaDownload  {
+    color: #CC9F26;
+    /* font-size: 1.6rem;
+    font-weight: 500; */
+    text-decoration: none;
+}
+
+.knowledgeArticle a.mediaDownload:hover {
+    text-decoration: underline;
+}
+
+.knowledgeArticle a.mediaDownload:focus {
+    text-decoration: underline;
+}
+
 .knowledgeArticle .standardContent img.card-img {
     padding: 0;
 }
@@ -24,6 +43,8 @@
     color: #807060;
     font-weight: 400;
 }
+
+
 
 @media screen and (max-width: 991.99px) {
     .knowledgeArticle.card {
