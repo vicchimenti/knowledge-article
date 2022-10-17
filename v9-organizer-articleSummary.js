@@ -13,13 +13,13 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.1
+*     @version 6.2.2
 */
 
 
 
 
-// content: _tag == '' ? null : _tag
+
 
 
 
@@ -222,22 +222,7 @@ try {
 
 
 
-    //      let imageString = (expertsDict.primaryImage.content) ?
-    //      '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" alt="' + expertsDict.contentName.content + '" loading="auto" /></span>' :
-    //      '<span class="expertsImage hidden visually-hidden">No Image Provided</span>';
- 
-    //  if (expertsDict.primaryImage.content) {
- 
-    //      let imageID = content.get('Photo').getID();
-    //      let mediaInfo = getMediaInfo(imageID);
-    //      let media = readMedia(imageID);
-    //      let info = new ImageInfo();
-    //      info.setInput(media);
- 
-    //      imageString = (info.check()) ?
-    //          '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
-    //          '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage noMediaId card-img-top p-0 m-0" loading="auto" /></span>';
-    //  }
+
 
 
                  /***
