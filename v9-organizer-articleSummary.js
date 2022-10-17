@@ -345,6 +345,8 @@ try {
     let closeHeader = '</div>';
     let openBody = '<div class="card-body">';
     let closeBody = '</div>';
+    let openFooter = '<div class="card-footer border-0 bg-transparent">';
+    let closeFooter = '</div>';
 
 
 
