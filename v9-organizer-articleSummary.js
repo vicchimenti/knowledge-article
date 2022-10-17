@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.7
+*     @version 6.2.8
 */
 
 
@@ -39,13 +39,17 @@
       *      and confirm valid existing content item field
       */
      function getContentValues(tag) {
+
          try {
              let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
+
              return {
                  isError: false,
                  content: _tag !== '' ? _tag : null 
              };
+
          } catch (error) {
+
              return {
                  isError: true,
                  message: error.message
@@ -68,7 +72,6 @@
             
             listValues += '<li class="tag">' + arrayofTags[tag].trim() + '</li>';
         }
-
 
         return '<div class="knowledgeBaseItem tags"><ul class="categories">' + listValues + '</ul></div>';
      }
