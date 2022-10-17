@@ -339,6 +339,8 @@ try {
      * 
      * */
     let endingHTML = '</div></article>';
+    let openRow = '<div class="row g-0 px-0">';
+    let closeRow = '</div>';
 
 
 
