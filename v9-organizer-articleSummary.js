@@ -341,6 +341,8 @@ try {
     let endingHTML = '</div></article>';
     let openRow = '<div class="row g-0 px-0">';
     let closeRow = '</div>';
+    let openHeader = '<div class="card-header border-0 bg-transparent">';
+    let closeHeader = '</div>';
 
 
 
