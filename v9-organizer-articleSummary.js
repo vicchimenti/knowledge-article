@@ -348,7 +348,7 @@ try {
     let openFooter = '<div class="card-footer border-0 bg-transparent">';
     let closeFooter = '</div>';
 
-
+    lastModified
 
     /***
      *  Set wrapper
@@ -358,6 +358,16 @@ try {
         '<article class="knowledgeArticle card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + knowledgeDict.articleTitle.content + '" id="ka' + knowledgeDict.contentId.content + '"><div class="knowledgeItem standardContent">' :
         '<article class="knowledgeArticle card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + knowledgeDict.contentName.content + '" id="ka' + knowledgeDict.contentId.content + '"><div class="knowledgeItem standardContent">' ;
 
+
+
+
+    /***
+     *  Format Last Modified
+     * 
+     * */
+    let lastModifiedString = (knowledgeDict.lastModified.content) ?
+          '<div class="lastModified"><p>' + knowledgeDict.lastModified.content + '</p></div>' :
+          '<span class="lastModified d-none hidden visually-hidden">No Last Modified Date Found</span>';
 
 
 
@@ -397,6 +407,7 @@ try {
     document.write('<div class="summary"><p>' + knowledgeDict.articleDescription.content + '</p></div>');
     document.write(closeBody);
     document.write(openFooter);
+    document.write(lastModifiedString);
     document.write(closeFooter);
     // document.write(imageIdTest);
 
