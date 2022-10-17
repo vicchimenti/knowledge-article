@@ -242,6 +242,17 @@ try {
 
 
 
+
+    /***
+     *  Description
+     * 
+     * */
+    let linkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
+        '<p class="externalLink card-text"><a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '">' + knowledgeDict.linkText.content + '</a></p>' :
+        '<span class="externalLink d-none hidden visually-hidden">No link entered</span>';
+
+
+
     /***
      *  Format Last Modified
      * 
@@ -324,6 +335,7 @@ try {
             imageString,
             closeImageWrapper,
             openDescriptionWrapper,
+            linkString,
             descriptionString,
             closeDescriptionWrapper,
             closeRow,
