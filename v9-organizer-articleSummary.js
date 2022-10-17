@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.1.6
+*     @version 6.1.7
 */
 
 
@@ -376,9 +376,9 @@ try {
   
     /* determine which link, if any, goes in the title */
     if (!knowledgeDict.articleFullBody.content) {
-        titleLink = "<h3>" + knowledgeDict.articleTitle.content + "</h3>";
+        titleLink = '<h3 class="card-title">' + knowledgeDict.articleTitle.content + '</h3>';
     } else {
-        titleLink = '<h3><a href="' + knowledgeDict.fullTextLink.content + '">' + knowledgeDict.articleTitle.content + '</a></h3>';
+        titleLink = '<h3 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link">' + knowledgeDict.articleTitle.content + '</a></h3>';
     }
   
   
