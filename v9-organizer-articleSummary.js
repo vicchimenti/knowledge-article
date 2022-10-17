@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.1.11
+*     @version 6.1.12
 */
 
 
@@ -395,11 +395,11 @@ try {
      * 
      * */
     let mediaFileString = (knowledgeDict.mediaFile.content) ?
-        '<p><a class="mediaDownload card-link" title="' + knowledgeDict.contentName.content + '" target="_blank">' + knowledgeDict.mediaFile.content + '</a></p>' :
+        '<p><a class="mediaDownload card-link" href="' + knowledgeDict.mediaFile.content + '" title="' + knowledgeDict.contentName.content + '" download>' + knowledgeDict.contentName.content + '</a></p>' :
         '<span class="d-none">No File Provided</span>';
 
     let pdfFileString = (knowledgeDict.pdfFile.content) ?
-        '<p><a class="pdfDownload card-link" title="' + knowledgeDict.contentName.content + '" target="_blank">' + knowledgeDict.pdfFile.content + '</a></p>' :
+        '<p><a class="pdfDownload card-link" href="' + knowledgeDict.pdfFile.content + '" title="' + knowledgeDict.contentName.content + '" download>' + knowledgeDict.contentName.content + '</a></p>' :
         '<span class="d-none">No File Provided</span>';
 
 
