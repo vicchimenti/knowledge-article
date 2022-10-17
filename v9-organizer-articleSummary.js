@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.6
+*     @version 6.2.7
 */
 
 
@@ -57,51 +57,22 @@
  
  
      /***
-      *         Returns an formatted unordered list
+      *        Returns a formatted unordered list
       */
-
-    //   if (fieldTags != "") {
-    //     var arrayOfTags = fieldTags.split(',');
-    //     for (let i = 0; i < arrayOfTags.length; i++) {
-    //       listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
-    //     }
-    //     listOfTags = '<div class="knowledgeBaseItem tags"><ul class="categories">' + listOfTags + '</ul></div>';
-    //   }
      function assignList(tags) {
 
         let arrayofTags = tags.split(',');
-
         let listValues = '';
 
-        for (let tag of arrayofTags) {
+        for (let tag = 0; tag < arrayofTags.length; tag++) {
             
-            listValues += '<li class="tag">' + tag.trim() + '</li>';
+            listValues += '<li class="tag">' + arrayofTags[tag].trim() + '</li>';
         }
 
-        let result = '<div class="knowledgeBaseItem tags"><ul class="categories">' + listValues + '</ul></div>';
 
-
-        return result;
+        return '<div class="knowledgeBaseItem tags"><ul class="categories">' + listValues + '</ul></div>';
      }
- 
 
-
-
-    /***
-      *      Returns an array of sdg items
-      */
-     function assignLsapList(arrayOfValues) {
-
-        let listValues = '';
-
-        for (let i = 0; i < arrayOfValues.length; i++) {
-
-            listValues += '<li class="list-group-item lsapIcon">' + arrayOfValues[i].trim() + '</li>';
-        }
-
-        return listValues;
-     }
- 
  
  
 
