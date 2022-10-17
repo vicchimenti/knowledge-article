@@ -1,6 +1,8 @@
   /***
 *     @author Victor Chimenti, MSCS
 *     @file v9-organizer-articleDescription.js
+*           Knowledge Base
+*           ID: 5555
 *           v9/organizer/articleDescription
 *
 *     This new content type is a generic knowledge base article that can be used
