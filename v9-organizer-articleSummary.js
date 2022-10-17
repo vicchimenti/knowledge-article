@@ -395,11 +395,11 @@ try {
      * 
      * */
     let mediaFileString = (knowledgeDict.mediaFile.content) ?
-          '<span>' + knowledgeDict.mediaFile.content + '</span>' :
+          '<p>' + knowledgeDict.mediaFile.content + '</p>' :
           '<span class="d-none">No File Provided</span>';
 
     let pdfFileString = (knowledgeDict.pdfFile.content) ?
-          '<span>' + knowledgeDict.pdfFile.content + '</span>' :
+          '<p>' + knowledgeDict.pdfFile.content + '</p>' :
           '<span class="d-none">No File Provided</span>';
 
 
