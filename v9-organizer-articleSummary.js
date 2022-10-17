@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.1.10
+*     @version 6.1.11
 */
 
 
@@ -390,6 +390,21 @@ try {
 
 
 
+    /***
+     *  Parse for Media Library File
+     * 
+     * */
+    let mediaFileString = (knowledgeDict.mediaFile.content) ?
+          '<span>' + knowledgeDict.mediaFile.content + '</span>' :
+          '<span class="d-none">No File Provided</span>';
+
+    let pdfFileString = (knowledgeDict.pdfFile.content) ?
+          '<span>' + knowledgeDict.pdfFile.content + '</span>' :
+          '<span class="d-none">No File Provided</span>';
+
+
+
+
   
   
   
@@ -437,6 +452,9 @@ try {
     document.write(closeBody);
     document.write(openFooter);
     document.write(lastModifiedString);
+    document.write(mediaFileString);
+    document.write(pdfFileString);
+
     document.write(closeFooter);
     
     document.write(endingHTML);
