@@ -408,7 +408,7 @@ try {
     document.write(openRow);
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="articleDescription col-xs-12 col-md-8">');
-    document.write('<p>' + knowledgeDict.articleDescription.content + '</p>');
+    document.write('<p class="card-text">' + knowledgeDict.articleDescription.content + '</p>');
     document.write('</div>'); // close articleDescription
     document.write(closeRow);
     document.write(closeBody);
