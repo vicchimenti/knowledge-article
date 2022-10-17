@@ -167,24 +167,6 @@
  
  
      /***
-      *      Returns a media id content name
-      */
-     function getTarget(itemId) {
- 
-         let mediaInfo = getMediaInfo(itemId);
-         let media = readMedia(itemId);
-         let info = new ImageInfo();
-         info.setInput(media);
- 
-         let target = (info.check()) ? '' + mediaInfo.getName() + '' : null;
- 
-         return target;
-     }
- 
- 
- 
- 
-     /***
       *      Returns an array of list items
       */
      function formatTargets(arrayOfValues) {
