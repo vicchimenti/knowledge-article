@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.12
+*     @version 6.2.13
 */
 
 
@@ -347,9 +347,9 @@ try {
             closeRow,
             closeBody,
             openFooter,
-            lastModifiedString,
             mediaFileString,
             topicString,
+            lastModifiedString,
             closeFooter,
             endingHTML
         ]
