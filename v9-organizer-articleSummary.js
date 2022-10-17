@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.0.4
+*     @version 6.0.5
 */
 
 
@@ -334,9 +334,27 @@ try {
 
   
   
-    /* -- Prepare all the things -- */
-    var beginningHTML = '<article class="knowledgeArticle card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + knowledgeDict.articleTitle.content + '" id="id' + knowledgeDict.contentId.content + '"><div class="knowledgeItem standardContent">';
-    var endingHTML = '</div></article>';
+    /***
+     *  Set defaults
+     * 
+     * */
+    let endingHTML = '</div></article>';
+
+
+
+
+    /***
+     *  Set wrapper
+     * 
+     * */
+    let beginningHTML = (knowledgeDict.articleTitle.content) ?
+        '<article class="knowledgeArticle card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + knowledgeDict.articleTitle.content + '" id="ka' + knowledgeDict.contentId.content + '"><div class="knowledgeItem standardContent">' :
+        '<article class="knowledgeArticle card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + knowledgeDict.contentName.content + '" id="ka' + knowledgeDict.contentId.content + '"><div class="knowledgeItem standardContent">' ;
+
+
+
+
+
   
   
   
