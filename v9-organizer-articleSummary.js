@@ -397,7 +397,7 @@ try {
 
     } else {
 
-        thumbNailString = '<span class="articleImage d-none hidden visually-hidden">No Image Provided</div>';
+        thumbNailString = '<span class="articleImage d-none hidden visually-hidden">No Image Provided</span>';
 
     }
     
