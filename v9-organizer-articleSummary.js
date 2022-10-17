@@ -386,10 +386,14 @@ try {
   
     /* -- Write all the things -- */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
+    document.write(openHeader);
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
+    document.write(closeHeader);
+    document.write(openBody);
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="articleDescription">');
     document.write('<div class="summary"><p>' + knowledgeDict.articleDescription.content + '</p></div>');
+    document.write(closeBody);
     // document.write(imageIdTest);
 
     
