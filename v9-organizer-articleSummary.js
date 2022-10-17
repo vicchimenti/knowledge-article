@@ -225,48 +225,25 @@ try {
 
 
 
-                 /***
+        /***
           *  Parse and format sdg icons
           * 
           * */
-                //   if (cejscDict.icons.content) {
- 
-                //     let iconArray = cejscDict.icons.content.split(',');
-                //     let iconPathArray = [];
-       
-                //     iconArray.sort();
-        
-                //     for (let icon in iconArray) {
-        
-                //         iconPathArray[icon] = mediaTag(iconArray[icon].trim());
-                //     }
-        
-                //     let iconValues = assignSdgList(iconPathArray);
-                //     listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
-                // }
-       
-       
-       
-       
-               /***
-                 *  Parse and format lsap icons
-                 * 
-                 * */
-            //    if (cejscDict.lsapIcons.content) {
-       
-            //        let iconArray = cejscDict.lsapIcons.content.split(',');
-            //        let iconPathArray = [];
-       
-            //        iconArray.sort();
-       
-            //        for (let icon in iconArray) {
-       
-            //            iconPathArray[icon] = mediaTag(iconArray[icon].trim());
-            //        }
-       
-            //        let iconValues = assignLsapList(iconPathArray);
-            //        listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
-            //    }
+        //   if (cejscDict.icons.content) {
+
+        //     let iconArray = cejscDict.icons.content.split(',');
+        //     let iconPathArray = [];
+
+        //     iconArray.sort();
+
+        //     for (let icon in iconArray) {
+
+        //         iconPathArray[icon] = mediaTag(iconArray[icon].trim());
+        //     }
+
+        //     let iconValues = assignSdgList(iconPathArray);
+        //     listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+        // }
        
        
         
