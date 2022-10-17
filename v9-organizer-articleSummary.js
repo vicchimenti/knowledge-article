@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.1.15
+*     @version 6.1.16
 */
 
 
@@ -455,24 +455,45 @@ try {
 
 
 
+    function processBodyWrapper() {
 
+        openImageWrapper = '<div class="knowledgeImage d-none hidden visually-hidden">';
+        openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-12">';
+    }
+
+    
     /***
      *  Process Image
      * 
      * */
     let imageFileId = (knowledgeDict.articleImage.content) ? content.get('Image').getID() : null;
     let imageMarkup = (imageFileId) ? imageTag(imageFileId) : null;
-    let imageString = imageMarkup || '<span class="articleImage d-none hidden visually-hidden">No valid image provided</span>';
-    if (!imageMarkup) {
-
-        openImageWrapper = '<div class="knowledgeImage d-none hidden visually-hidden">';
-        openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-12">';
-
-    }
 
 
+    // let imageString = imageMarkup || '<span class="articleImage d-none hidden visually-hidden">No valid image provided</span>';
+    // if (!imageMarkup) {
+
+    //     openImageWrapper = '<div class="knowledgeImage d-none hidden visually-hidden">';
+    //     openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-12">';
+
+    // }
 
 
+    let imageString = (imageMarkup) => {
+
+
+        processBodyWrapper();
+        return imageMarkup || '<span class="articleImage d-none hidden visually-hidden">No valid image provided</span>';
+
+    } 
+
+
+
+
+    // const greeting = (person) => {
+    //     const name = person ? person.name : "stranger";
+    //     return `Howdy, ${name}`;
+    //   }
     
   
   
