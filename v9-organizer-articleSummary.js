@@ -155,7 +155,7 @@
 
         let mediaHTML = (info.check()) ?
             '<figure class="figure"><img src="' + mediaPath + '" class="articleImage figure-img img-fluid" title="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure>' :
-            '<span class="class="articleImage visually-hidden hidden">Invalid Image ID</span>';
+            '<figure class="d-none hidden visually-hidden"><span class="class="articleImage visually-hidden hidden">Invalid Image ID</span></figure>';
 
         return mediaHTML;
       }
@@ -437,32 +437,41 @@ try {
   
   
     /* determine which link, if any, goes on the image */
-    if (knowledgeDict.linkSource.content && knowledgeDict.articleImage.content) {
+    // if (knowledgeDict.linkSource.content && knowledgeDict.articleImage.content) {
 
-        thumbNailString = '<a href="' + knowledgeDict.linkSource.content + '" target="_blank"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></a>';
+    //     thumbNailString = '<a href="' + knowledgeDict.linkSource.content + '" target="_blank"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></a>';
 
-    } else if (knowledgeDict.articleImage.content) {
+    // } else if (knowledgeDict.articleImage.content) {
 
-        thumbNailString = '<img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" />';
+    //     thumbNailString = '<img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" />';
 
-    } else {
+    // } else {
 
-        openImageWrapper = '<div class="knowledgeImage d-none hidden visually-hidden">';
-        openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-12">';
-        thumbNailString = '<span class="articleImage d-none hidden visually-hidden">No Image Provided</span>';
+    //     openImageWrapper = '<div class="knowledgeImage d-none hidden visually-hidden">';
+    //     openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-12">';
+    //     thumbNailString = '<span class="articleImage d-none hidden visually-hidden">No Image Provided</span>';
 
-    }
+    // }
 
 
 
 
     /***
-     *  Gather media id
+     *  Process Image
      * 
      * */
-    let mediaFileId = (knowledgeDict.articleImage.content) ? content.get('Image').getID() : null;
-    let imageMarkup = (mediaFileId) ? imageTag(mediaFileId) : null;
+    let imageFileId = (knowledgeDict.articleImage.content) ? content.get('Image').getID() : null;
+    let imageMarkup = (imageFileId) ? imageTag(imageFileId) : null;
     let imageString = imageMarkup || '<span class="articleImage d-none hidden visually-hidden">No valid image provided</span>';
+    if (!imageMarkup) {
+
+        openImageWrapper = '<div class="knowledgeImage d-none hidden visually-hidden">';
+        openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-12">';
+
+    }
+
+
+
 
     
   
