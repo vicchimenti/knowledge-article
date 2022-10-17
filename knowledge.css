@@ -4,6 +4,16 @@
     margin: 30px 0;
 }
 
+.knowledgeArticle p,
+.knowledgeArticle span,
+.knowledgeArticle a,
+.knowledgeArticle h3,
+.knowledgeArticle h4 {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
 .knowledgeArticle .externalLink a {
     color: #088099;
     font-size: 1.6rem;
