@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.1.9
+*     @version 6.1.10
 */
 
 
@@ -228,8 +228,7 @@ try {
     // var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />");
     // var contentID = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='content_id' />");
     // var lastModified = '<div class="lastModified" style="display:inline-block"><p>Last modified: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></p></div>'; 
-    var titleLink = "";
-    var thumbNailString = "";
+
 
 
     /***
@@ -351,6 +350,7 @@ try {
     let closeImageWrapper = '</div>';
     let openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-8">';
     let closeDescriptionWrapper = '</div>';
+    let thumbNailString = "";
 
 
     /***
@@ -375,15 +375,29 @@ try {
 
 
 
+    /***
+     *  Establish h3
+     *  allow editors to hide the fulltext link when no full body exists
+     * 
+     * */
+     let titleLink = (knowledgeDict.articleFullBody.content && knowledgeDict.fullTextLink.content && knowledgeDict.articleTitle.content) ?
+        '<h3 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link" title="Read more about ' + knowledgeDict.articleTitle.content + '">' + knowledgeDict.articleTitle.content + '</a></h3>' :
+        (knowledgeDict.articleTitle.content) ?
+        '<h3 class="card-title">' + knowledgeDict.articleTitle.content + '</h3>' :
+        '<h3 class="card-title">' + knowledgeDict.contentName.content + '</h3>';
+
+
+
+
   
   
   
     /* determine which link, if any, goes in the title */
-    if (!knowledgeDict.articleFullBody.content) {
-        titleLink = '<h3 class="card-title">' + knowledgeDict.articleTitle.content + '</h3>';
-    } else {
-        titleLink = '<h3 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link">' + knowledgeDict.articleTitle.content + '</a></h3>';
-    }
+    // if (!knowledgeDict.articleFullBody.content) {
+    //     titleLink = '<h3 class="card-title">' + knowledgeDict.articleTitle.content + '</h3>';
+    // } else {
+    //     titleLink = '<h3 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link">' + knowledgeDict.articleTitle.content + '</a></h3>';
+    // }
   
   
     /* determine which link, if any, goes on the image */
