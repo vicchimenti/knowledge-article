@@ -395,9 +395,8 @@ try {
      *  Parse for Media Library File
      * 
      * */
-    let mediaFileId = knowledgeDict.mediaFile.content.content.Content.getID() || null;
     let mediaFileString = (knowledgeDict.mediaFile.content) ?
-        '<p><a class="mediaDownload card-link" href="' + knowledgeDict.mediaFile.content + '" title="' + knowledgeDict.contentName.content + '" download>' + mediaFileId + '</a></p>' :
+        '<p><a class="mediaDownload card-link" href="' + knowledgeDict.mediaFile.content + '" title="' + knowledgeDict.contentName.content + '" download>' + knowledgeDict.contentName.content + '</a></p>' :
         '<span class="d-none">No File Provided</span>';
 
 
@@ -439,6 +438,7 @@ try {
      *  Gather media id
      * 
      * */
+    let mediaFileId = 
 
 
     
