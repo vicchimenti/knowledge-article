@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.0
+*     @version 6.2.1
 */
 
 
@@ -132,7 +132,7 @@
          info.setInput(media);
  
          let mediaHTML = (mediaInfo) ?
-            '<p class="card-text"><a class="mediaDownload card-link" href="' + mediaPath + '" title="Read the full document: ' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" download>' + mediaInfo.getName() + '</a></p>' :
+            '<h4 class="card-text"><a class="mediaDownload card-link" href="' + mediaPath + '" title="Read the full document: ' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" download>' + mediaInfo.getName() + '</a></h4>' :
             '<span class="mediaDownload d-none visually-hidden hidden">Invalid Media ID</span>';
 
             //  '<figure class="figure"><img src="' + mediaPath + '" class="listgroupImage figure-img img-fluid" title="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure><figcaption class="figure-caption visually-hidden hidden">' + mediaInfo.getName() + '</figcaption>' :
@@ -409,16 +409,11 @@ try {
 
 
     /***
-     *  Parse for Media Library File
+     *  Process Media Library PDF File
      * 
      * */
      let mediaFileId = (knowledgeDict.mediaFile.content) ? content.get('Media File').getID() : null;
-     let mediaFileString = (mediaFileId) ? mediaTag(mediaFileId) : '<span class="d-none">No File Provided</span>';
-        // '<p><a class="mediaDownload card-link" href="' + knowledgeDict.mediaFile.content + '" title="' + knowledgeDict.contentName.content + '" download>' + knowledgeDict.contentName.content + '</a></p>' :
-        // '<span class="d-none">No File Provided</span>';
-
-
-
+     let mediaFileString = (mediaFileId) ? mediaTag(mediaFileId) : '<span class="d-none hidden visually-hidden">No File Provided</span>';
 
 
 
