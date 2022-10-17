@@ -347,6 +347,10 @@ try {
     let closeBody = '</div>';
     let openFooter = '<div class="card-footer border-0 bg-transparent">';
     let closeFooter = '</div>';
+    let openImageWrapper = '<div class="knowledgeImage col-xs-12 col-md-4">';
+    let closeImageWrapper = '</div>';
+    let openDescriptionWrapper = '<div class="articleDescription col-xs-12 col-md-8">';
+    let closeDescriptionWrapper = '</div>';
 
 
     /***
@@ -385,15 +389,15 @@ try {
     /* determine which link, if any, goes on the image */
     if (knowledgeDict.linkSource.content && knowledgeDict.articleImage.content) {
 
-        thumbNailString = '<div class="knowledgeImage col-xs-12 col-md-4"><a href="' + knowledgeDict.linkSource.content + '" target="_blank"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></a></div>';
+        thumbNailString = '<a href="' + knowledgeDict.linkSource.content + '" target="_blank"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></a>';
 
     } else if (knowledgeDict.articleImage.content) {
 
-        thumbNailString = '<div class="knowledgeImage col-xs-12 col-md-4"><img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" /></div>';
+        thumbNailString = '<img src="' + knowledgeDict.articleImage.content + '" class="articleImage" alt="" />';
 
     } else {
 
-        thumbNailString = '<div class="knowledgeImage col-xs-12 col-md-4 d-none hidden visually-hidden">No Image Provided</div>';
+        thumbNailString = '<span class="articleImage d-none hidden visually-hidden">No Image Provided</div>';
 
     }
     
