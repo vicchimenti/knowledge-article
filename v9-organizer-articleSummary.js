@@ -112,14 +112,14 @@
       */
      function mediaTag(itemId) {
  
-         let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
-         let mediaInfo = getMediaInfo(itemId);
- 
-         let mediaHTML = (mediaInfo) ?
+        let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
+        let mediaInfo = getMediaInfo(itemId);
+
+        let mediaHTML = (mediaInfo) ?
             '<h4 class="card-text"><a class="mediaDownload card-link" href="' + mediaPath + '" title="Read the full document: ' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" download>' + mediaInfo.getName() + '</a></h4>' :
             '<span class="mediaDownload d-none visually-hidden hidden">Invalid Media ID</span>';
- 
-         return mediaHTML;
+
+        return mediaHTML;
      }
 
 
@@ -164,35 +164,30 @@ try {
 
 
 
-         /***
-          *      Dictionary of content
-          * */
-          let knowledgeDict = {
- 
-            contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
-            articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
-            articleSubtitle: getContentValues('<t4 type="content" name="Subtitle" output="normal" modifiers="striptags,htmlentities" />'),
-            articleImage: getContentValues('<t4 type="content" name="Image" output="normal" formatter="path/*" />'),
-            articleDescription: getContentValues('<t4 type="content" name="Description" output="normal" modifiers="striptags,htmlentities" />'),
-            articleFullBody: getContentValues('<t4 type="content" name="Full Article" output="normal" modifiers="medialibrary,nav_sections" />'),
-            topics: getContentValues('<t4 type="content" name="Topics" output="normal" modifiers="striptags,htmlentities" />'),
-            linkSource: getContentValues('<t4 type="content" name="Link" output="normal" modifiers="nav_sections" />'),
-            linkText: getContentValues('<t4 type="content" name="Link" output="linktext" modifiers="nav_sections" />'),
-            mediaFile: getContentValues('<t4 type="content" name="Media File" output="normal" formatter="path/*" />'),
-            fullTextLink: getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
-            lastModified: getContentValues('<t4 type="meta" meta="last_modified" format="EEEE, MMMM d, yyyy" />'),
-            contentId: getContentValues('<t4 type="meta" meta="content_id" />')
+    /***
+     *      Dictionary of content
+     * */
+    let knowledgeDict = {
 
-          };
+        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
+        articleSubtitle: getContentValues('<t4 type="content" name="Subtitle" output="normal" modifiers="striptags,htmlentities" />'),
+        articleImage: getContentValues('<t4 type="content" name="Image" output="normal" formatter="path/*" />'),
+        articleDescription: getContentValues('<t4 type="content" name="Description" output="normal" modifiers="striptags,htmlentities" />'),
+        articleFullBody: getContentValues('<t4 type="content" name="Full Article" output="normal" modifiers="medialibrary,nav_sections" />'),
+        topics: getContentValues('<t4 type="content" name="Topics" output="normal" modifiers="striptags,htmlentities" />'),
+        linkSource: getContentValues('<t4 type="content" name="Link" output="normal" modifiers="nav_sections" />'),
+        linkText: getContentValues('<t4 type="content" name="Link" output="linktext" modifiers="nav_sections" />'),
+        mediaFile: getContentValues('<t4 type="content" name="Media File" output="normal" formatter="path/*" />'),
+        fullTextLink: getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
+        lastModified: getContentValues('<t4 type="meta" meta="last_modified" format="EEEE, MMMM d, yyyy" />'),
+        contentId: getContentValues('<t4 type="meta" meta="content_id" />')
+
+    };
 
 
 
-       
-        
-        
-
-  
-  
+         
     /***
      *  Set defaults
      * 
@@ -294,13 +289,6 @@ try {
 
 
 
-    // if (fieldTags != "") {
-    //     var arrayOfTags = fieldTags.split(',');
-    //     for (let i = 0; i < arrayOfTags.length; i++) {
-    //       listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
-    //     }
-    //     listOfTags = '<div class="knowledgeBaseItem tags"><ul class="categories">' + listOfTags + '</ul></div>';
-    //   }
 
     /***
      *  Parse and format list items
@@ -312,23 +300,7 @@ try {
      
     
     
-    // if (knowledgeDict.topics.content) {
 
-    //     let topicArray = knowledgeDict.topics.content.split(',');
-    //     let iconPathArray = [];
-
-    //     iconArray.sort();
-
-    //     for (let icon in iconArray) {
-
-    //         iconPathArray[icon] = mediaTag(iconArray[icon].trim());
-    //     }
-
-    //     let iconValues = assignSdgList(iconPathArray);
-    //     listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
-    //  }
-       
-    //  '<div class="knowledgeBaseItem tags"><ul class="categories">' + listValues + '</ul></div>';
     
   
   
