@@ -481,24 +481,7 @@ try {
     if (!imageMarkup) { processBodyWrapper(); }
 
 
-    // let imageString = (imageMarkup) => {
 
-
-    //     processBodyWrapper();
-    //     const thisMarkup = (imageMarkup) ? imageMarkup : '<span class="articleImage d-none hidden visually-hidden">No valid image provided</span>';
-    //     // return imageMarkup || '<span class="articleImage d-none hidden visually-hidden">No valid image provided</span>';
-
-    //     return thisMarkup;
-
-    // } 
-
-
-
-
-    // const greeting = (person) => {
-    //     const name = person ? person.name : "stranger";
-    //     return `Howdy, ${name}`;
-    //   }
     
   
   
