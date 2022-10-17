@@ -396,6 +396,8 @@ try {
     document.write('<div class="articleDescription">');
     document.write('<div class="summary"><p>' + knowledgeDict.articleDescription.content + '</p></div>');
     document.write(closeBody);
+    document.write(openFooter);
+    document.write(closeFooter);
     // document.write(imageIdTest);
 
     
