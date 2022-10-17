@@ -139,27 +139,6 @@
 
         return mediaHTML;
      }
- 
- 
- 
- 
-     /***
-      *      Returns an array of list items
-      */
-     function formatTargets(arrayOfValues) {
- 
-         let listValues = '';
- 
-         for (let i = 0; i < arrayOfValues.length; i++) {
- 
-             if (arrayOfValues[i]) {
-                 let cleanValue = arrayOfValues[i].replace(/\s/g, '-');
-                 listValues += '' + cleanValue.trim() + ' ';
-             }
-         }
- 
-         return listValues;
-     }
 
  
  
