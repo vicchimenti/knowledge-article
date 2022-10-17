@@ -70,16 +70,18 @@
      function assignList(tags) {
 
         let arrayofTags = tags.split(',');
- 
-         let listValues = '';
 
-         for (const tag of arrayofTags) {
-             
+        let listValues = '';
+
+        for (let tag of arrayofTags) {
+            
             listValues += '<li class="tag">' + tag.trim() + '</li>';
-         }
- 
- 
-         return '<div class="knowledgeBaseItem tags"><ul class="categories">' + listValues + '</ul></div>';
+        }
+
+        let result = '<div class="knowledgeBaseItem tags"><ul class="categories">' + listValues + '</ul></div>';
+
+
+        return result;
      }
  
 
