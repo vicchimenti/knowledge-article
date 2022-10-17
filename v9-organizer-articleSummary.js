@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.1.13
+*     @version 6.1.14
 */
 
 
@@ -137,12 +137,34 @@
  
          return mediaHTML;
      }
+
+
+
+
+    /***
+      *      Returns a formatted html img tag
+      */
+      function imageTag(itemId) {
+
+        // media path would be a good place to route through get content values to check for nulls and return a detailed error code
+        let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
+        let mediaInfo = getMediaInfo(itemId);
+        let media = readMedia(itemId);
+        let info = new ImageInfo();
+        info.setInput(media);
+
+        let mediaHTML = (info.check()) ?
+            '<figure class="figure"><img src="' + mediaPath + '" class="class="articleImage figure-img img-fluid" title="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure>' :
+            '<span class="class="articleImage visually-hidden hidden">Invalid Image ID</span>';
+
+        return mediaHTML;
+      }
  
  
  
  
      /***
-      *      Returns a formatted html img tag
+      *      Returns a media id content name
       */
      function getTarget(itemId) {
  
@@ -438,8 +460,8 @@ try {
      *  Gather media id
      * 
      * */
-    let mediaFileId = 
-
+    let mediaFileId = (knowledgeDict.articleImage.content) ? content.get('Image').getID() : null;
+    let imageString = (mediaFileId) ? imageTag() : '<span class="articleImage d-none hidden visually-hidden">No valid image provided</span>';
 
     
   
