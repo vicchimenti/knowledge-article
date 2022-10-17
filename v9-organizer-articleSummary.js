@@ -11,7 +11,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.1.7
+*     @version 6.1.8
 */
 
 
@@ -365,7 +365,7 @@ try {
      * 
      * */
     let lastModifiedString = (knowledgeDict.lastModified.content) ?
-          '<div class="lastModified"><p>' + knowledgeDict.lastModified.content + '</p></div>' :
+          '<div class="lastModified"><p class="card-text"><em>' + knowledgeDict.lastModified.content + '</em></p></div>' :
           '<span class="lastModified d-none hidden visually-hidden">No Last Modified Date Found</span>';
 
 
