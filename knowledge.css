@@ -34,6 +34,14 @@
     text-decoration: underline;
 }
 
+.knowledgeArticle h4 {
+    padding-top: 15px;
+}
+
+.knowledgeArticle ul.categories {
+    margin: 0;
+} 
+
 .knowledgeArticle .standardContent img.card-img {
     padding: 0;
 }
