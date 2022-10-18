@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.20
+*     @version 6.2.21
 */
 
 
@@ -296,7 +296,7 @@ try {
      * 
      * */
     let contentLinkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
-        '<a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a>' :
+        '<span class="externalLink card-text"><a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a></span>' :
         null;
     
 
