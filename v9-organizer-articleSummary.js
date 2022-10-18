@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.18
+*     @version 6.2.19
 */
 
 
@@ -45,7 +45,7 @@
 
              return {
                  isError: false,
-                 content: _tag !== '' ? _tag : null 
+                 content: _tag != '' ? _tag : null 
              };
 
          } catch (error) {
@@ -279,7 +279,7 @@ try {
 
 
     /***
-     *  Description
+     *  Subtitle subhead
      * 
      * */
     let subtitleString = (knowledgeDict.articleSubtitle.content) ?
@@ -290,13 +290,15 @@ try {
 
 
     /***
-     *  Description
+     *  Section/Content Link
      * 
      * */
     let contentLinkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
-        '<span class="externalLink card-text"><a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a></span>' :
-        null;
-
+        '<a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a>' : null;
+    
+        let testLinkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
+        '<span>Link Source: ' + knowledgeDict.linkSource.content + ' | Link Text: ' + knowledgeDict.linkText.content +  '</span>':
+        '<span>Null Link</span>';
 
 
     /***
@@ -365,7 +367,9 @@ try {
     let linkArray = [contentLinkString, mediaFileString];
     let linkList = parseArray(linkArray);
     let formattedLinkList = assignLinkList(linkList);
-    let linkString = '<ul class="contactList d-flex flex-column flex-md-row justify-content-start p-0">' + formattedLinkList + '</ul>';
+    let linkString = (formattedLinkList) ?
+        '<ul class="contactList d-flex flex-column flex-md-row justify-content-start p-0">' + formattedLinkList + '</ul>' :
+        '<span class="contactList d-none hidden visually-hidden">No Links</span>';
      
     
     
@@ -387,6 +391,7 @@ try {
             imageString,
             closeImageWrapper,
             openDescriptionWrapper,
+            testLinkString,
             subtitleString,
             descriptionString,
             closeDescriptionWrapper,
