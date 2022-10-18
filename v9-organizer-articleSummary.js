@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.17
+*     @version 6.2.18
 */
 
 
@@ -104,7 +104,7 @@
 
             if (arrayOfValues[i]) {
 
-                listValues += '<li class="list-group-item d-inline p-0 pe-md-4">' + arrayOfValues[i].trim() + '</li>';
+                listValues += '<li class="list-group-item d-inline p-0 pe-md-4">' + arrayOfValues[i] + '</li>';
             }
         }
 
