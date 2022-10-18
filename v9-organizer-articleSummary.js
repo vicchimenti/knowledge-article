@@ -319,6 +319,18 @@ try {
     let topicString = (knowledgeDict.topics.content) ?
         assignList(knowledgeDict.topics.content) :
         '<span class="knowledgeBaseItem tags d-none hidden visually-hidden">No Topics Provided</span>';
+
+
+
+
+                /***
+         *  format contact string
+         * 
+         * */
+                 let subtitleArray = [bldgRoomString, emailAddressString, phoneString]
+                 let subtitles = parseArray(subtitleArray);
+                 let subtitleList = assignList(subtitles);
+                 let subtitleString = '<ul class="contactList d-flex flex-column flex-md-row justify-content-start p-0">' + subtitleList + '</ul>';
      
     
     
