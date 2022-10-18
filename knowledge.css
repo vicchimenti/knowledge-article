@@ -31,9 +31,9 @@
 }
 
 .knowledgeArticle a.mediaDownload  {
-    color: #CC9F26;
-    /* font-size: 1.6rem;
-    font-weight: 500; */
+    color: #EF4135;
+    /* font-size: 1.6rem; */
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -57,10 +57,11 @@
     padding: 0;
 }
 
-.knowledgeArticle .lastModified .text-muted {
+.knowledgeArticle .lastModified p {
     /* color: #777; */
     color: #807060;
     font-weight: 400;
+    font-size: 1rem;
 }
 
 .knowledgeArticle .standardContent ul.linkList {
@@ -75,7 +76,13 @@
 .knowledgeArticle .linkListItem {
     border: none;
     display: inline-block;
-    padding: 10px 15px 10px 0;
+    padding: 10px 15px 0 0;
+}
+
+.knowledgeArticle ul li.tag {
+    background: #CC9F26;
+    color: #fff;
+    font-weight: 500;
 }
 
 
