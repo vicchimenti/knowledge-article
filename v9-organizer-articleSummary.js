@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.21
+*     @version 6.2.22
 */
 
 
@@ -230,7 +230,7 @@ try {
      * 
      * */
     let endingHTML = '</div></article>';
-    let openRow = '<div class="row g-0 px-0">';
+    let openRow = '<div class="row g-0 px-0 mx-0">';
     let closeRow = '</div>';
     let openHeader = '<div class="card-header border-0 bg-transparent">';
     let closeHeader = '</div>';
@@ -369,7 +369,7 @@ try {
     let linkList = parseArray(linkArray);
     let formattedLinkList = assignLinkList(linkList);
     let linkString = (formattedLinkList) ?
-        '<ul class="linkList d-flex flex-column flex-md-row justify-content-start p-0">' + formattedLinkList + '</ul>' :
+        '<ul class="linkList d-flex flex-column flex-md-row justify-content-start p-0 m-0">' + formattedLinkList + '</ul>' :
         '<span class="linkList d-none hidden visually-hidden">No Links</span>';
      
     
