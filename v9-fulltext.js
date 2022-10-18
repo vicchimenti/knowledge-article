@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 7.2
+*     @version 7.3
 */
 
 
@@ -286,7 +286,7 @@ try {
      * 
      * */
     let fullBodyString = (knowledgeDict.articleFullBody.content) ?
-    '<div class="articleFullbody card-text">' + knowledgeDict.articleDescription.content + '</div>' :
+    '<div class="articleFullbody card-text">' + knowledgeDict.articleFullBody.content + '</div>' :
     '<span class="articleFullbody d-none hidden visually-hidden">No content entered</span>';
 
 
