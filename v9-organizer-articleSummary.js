@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.16
+*     @version 6.2.17
 */
 
 
@@ -294,7 +294,7 @@ try {
      * 
      * */
     let contentLinkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
-        '<p class="externalLink card-text"><a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a></p>' :
+        '<span class="externalLink card-text"><a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a></span>' :
         null;
 
 
@@ -362,7 +362,7 @@ try {
      *  format content and pdf links
      * 
      * */
-    let linkArray = [contentLinkString, mediaFileString]
+    let linkArray = [contentLinkString, mediaFileString];
     let linkList = parseArray(linkArray);
     let formattedLinkList = assignLinkList(linkList);
     let linkString = '<ul class="contactList d-flex flex-column flex-md-row justify-content-start p-0">' + formattedLinkList + '</ul>';
