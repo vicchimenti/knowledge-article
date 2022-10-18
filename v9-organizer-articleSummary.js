@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.19
+*     @version 6.2.20
 */
 
 
@@ -77,6 +77,28 @@
      }
 
 
+
+
+    /***
+     *      Returns an array of list items
+     */
+     function assignLinkList(arrayOfValues) {
+
+        let listValues = '';
+        for (let i = 0; i < arrayOfValues.length; i++) {
+
+            if (arrayOfValues[i]) {
+
+                listValues += '<li class="linkListItem list-group-item d-inline p-0 pe-md-4">' + arrayOfValues[i] + '</li>';
+            }
+        }
+
+        return listValues;
+     }
+
+
+
+
     /***
      *      Parses array values for null
      */
@@ -89,26 +111,6 @@
         }
 
         return results;
-     }
-        
-         
-     
-     
-    /***
-     *      Returns an array of list items
-     */
-     function assignLinkList(arrayOfValues) {
-
-        let listValues = '';
-        for (let i = 0; i < arrayOfValues.length; i++) {
-
-            if (arrayOfValues[i]) {
-
-                listValues += '<li class="list-group-item d-inline p-0 pe-md-4">' + arrayOfValues[i] + '</li>';
-            }
-        }
-
-        return listValues;
      }
 
  
