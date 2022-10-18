@@ -294,11 +294,10 @@ try {
      * 
      * */
     let contentLinkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
-        '<a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a>' : null;
+        '<a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a>' :
+        null;
     
-        let testLinkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
-        '<span>Link Source: ' + knowledgeDict.linkSource.content + ' | Link Text: ' + knowledgeDict.linkText.content +  '</span>':
-        '<span>Null Link</span>';
+
 
 
     /***
