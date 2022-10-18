@@ -13,8 +13,9 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 7.0
+*     @version 7.1
 */
+
 
 
 
@@ -45,7 +46,7 @@
 
              return {
                  isError: false,
-                 content: _tag !== '' ? _tag : null 
+                 content: _tag != '' ? _tag : null 
              };
 
          } catch (error) {
@@ -74,6 +75,43 @@
         }
 
         return '<div class="knowledgeBaseItem tags"><ul class="categories">' + listValues + '</ul></div>';
+     }
+
+
+
+
+    /***
+     *      Returns an array of list items
+     */
+     function assignLinkList(arrayOfValues) {
+
+        let listValues = '';
+        for (let i = 0; i < arrayOfValues.length; i++) {
+
+            if (arrayOfValues[i]) {
+
+                listValues += '<li class="linkListItem list-group-item d-inline p-0 pe-md-4">' + arrayOfValues[i] + '</li>';
+            }
+        }
+
+        return listValues;
+     }
+
+
+
+
+    /***
+     *      Parses array values for null
+     */
+     function parseArray(rawValues) {
+
+        let results = [];
+        for (let value in rawValues) {
+
+            if (rawValues[value]) results.push(rawValues[value]);
+        }
+
+        return results;
      }
 
  
@@ -116,8 +154,8 @@
         let mediaInfo = getMediaInfo(itemId);
 
         let mediaHTML = (mediaInfo) ?
-            '<h4 class="card-text"><a class="mediaDownload card-link" href="' + mediaPath + '" title="Read the full document: ' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" download>' + mediaInfo.getName() + '</a></h4>' :
-            '<span class="mediaDownload d-none visually-hidden hidden">Invalid Media ID</span>';
+            '<span class="card-text"><a class="mediaDownload card-link" href="' + mediaPath + '" title="Download the full document: ' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" download>' + mediaInfo.getName() + '</a></span>' :
+            null;
 
         return mediaHTML;
      }
@@ -193,7 +231,7 @@ try {
      * 
      * */
     let endingHTML = '</div></article>';
-    let openRow = '<div class="row g-0 px-0">';
+    let openRow = '<div class="row g-0 px-0 mx-0">';
     let closeRow = '</div>';
     let openHeader = '<div class="card-header border-0 bg-transparent">';
     let closeHeader = '</div>';
@@ -244,7 +282,7 @@ try {
 
 
     /***
-     *  Description
+     *  Subtitle subhead
      * 
      * */
     let subtitleString = (knowledgeDict.articleSubtitle.content) ?
@@ -255,12 +293,13 @@ try {
 
 
     /***
-     *  Description
+     *  Section/Content Link
      * 
      * */
-    let linkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
-        '<p class="externalLink card-text"><a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a></p>' :
-        '<span class="externalLink d-none hidden visually-hidden">No link entered</span>';
+    let contentLinkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
+        '<span class="externalLink card-text"><a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a></span>' :
+        null;
+    
 
 
 
@@ -281,10 +320,10 @@ try {
      * 
      * */
      let titleLink = (knowledgeDict.articleFullBody.content && knowledgeDict.fullTextLink.content && knowledgeDict.articleTitle.content) ?
-        '<h1 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link" title="Read more about ' + knowledgeDict.articleTitle.content + '">' + knowledgeDict.articleTitle.content + '</a></h1>' :
+        '<h3 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link" title="Read more about ' + knowledgeDict.articleTitle.content + '">' + knowledgeDict.articleTitle.content + '</a></h3>' :
         (knowledgeDict.articleTitle.content) ?
-        '<h1 class="card-title">' + knowledgeDict.articleTitle.content + '</h1>' :
-        '<h1 class="card-title">' + knowledgeDict.contentName.content + '</h1>';
+        '<h3 class="card-title">' + knowledgeDict.articleTitle.content + '</h3>' :
+        '<h3 class="card-title">' + knowledgeDict.contentName.content + '</h3>';
 
 
 
@@ -294,7 +333,7 @@ try {
      * 
      * */
      let mediaFileId = (knowledgeDict.mediaFile.content) ? content.get('Media File').getID() : null;
-     let mediaFileString = (mediaFileId) ? mediaTag(mediaFileId) : '<span class="d-none hidden visually-hidden">No File Provided</span>';
+     let mediaFileString = (mediaFileId) ? mediaTag(mediaFileId) : null;
 
 
 
@@ -319,6 +358,20 @@ try {
     let topicString = (knowledgeDict.topics.content) ?
         assignList(knowledgeDict.topics.content) :
         '<span class="knowledgeBaseItem tags d-none hidden visually-hidden">No Topics Provided</span>';
+
+
+
+
+    /***
+     *  format content and pdf links
+     * 
+     * */
+    let linkArray = [contentLinkString, mediaFileString];
+    let linkList = parseArray(linkArray);
+    let formattedLinkList = assignLinkList(linkList);
+    let linkString = (formattedLinkList) ?
+        '<ul class="linkList d-flex flex-column flex-md-row justify-content-start p-0 m-0">' + formattedLinkList + '</ul>' :
+        '<span class="linkList d-none hidden visually-hidden">No Links</span>';
      
     
     
@@ -340,14 +393,13 @@ try {
             imageString,
             closeImageWrapper,
             openDescriptionWrapper,
-            linkString,
             subtitleString,
             descriptionString,
             closeDescriptionWrapper,
             closeRow,
             closeBody,
             openFooter,
-            mediaFileString,
+            linkString,
             topicString,
             lastModifiedString,
             closeFooter,
