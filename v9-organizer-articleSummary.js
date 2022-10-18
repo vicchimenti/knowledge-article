@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.22
+*     @version 6.2.23
 */
 
 
@@ -153,7 +153,7 @@
         let mediaInfo = getMediaInfo(itemId);
 
         let mediaHTML = (mediaInfo) ?
-            '<span class="card-text"><a class="mediaDownload card-link" href="' + mediaPath + '" title="Read the full document: ' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" download>' + mediaInfo.getName() + '</a></span>' :
+            '<span class="card-text"><a class="mediaDownload card-link" href="' + mediaPath + '" title="Download the full document: ' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" download>' + mediaInfo.getName() + '</a></span>' :
             null;
 
         return mediaHTML;
