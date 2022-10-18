@@ -76,6 +76,41 @@
         return '<div class="knowledgeBaseItem tags"><ul class="categories">' + listValues + '</ul></div>';
      }
 
+
+    /***
+     *      Parses array values for null
+     */
+     function parseArray(rawValues) {
+
+        let results = [];
+        for (let value in rawValues) {
+
+            if (rawValues[value]) results.push(rawValues[value]);
+        }
+
+        return results;
+     }
+        
+         
+     
+     
+    /***
+     *      Returns an array of list items
+     */
+     function assignLinkList(arrayOfValues) {
+
+        let listValues = '';
+        for (let i = 0; i < arrayOfValues.length; i++) {
+
+            if (arrayOfValues[i]) {
+
+                listValues += '<li class="list-group-item d-inline p-0 pe-md-4">' + arrayOfValues[i].trim() + '</li>';
+            }
+        }
+
+        return listValues;
+     }
+
  
  
 
@@ -258,7 +293,7 @@ try {
      *  Description
      * 
      * */
-    let linkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
+    let contentLinkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
         '<p class="externalLink card-text"><a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a></p>' :
         '<span class="externalLink d-none hidden visually-hidden">No link entered</span>';
 
@@ -323,14 +358,14 @@ try {
 
 
 
-                /***
-         *  format contact string
-         * 
-         * */
-                 let subtitleArray = [bldgRoomString, emailAddressString, phoneString]
-                 let subtitles = parseArray(subtitleArray);
-                 let subtitleList = assignList(subtitles);
-                 let subtitleString = '<ul class="contactList d-flex flex-column flex-md-row justify-content-start p-0">' + subtitleList + '</ul>';
+    /***
+     *  format content and pdf links
+     * 
+     * */
+    let linkArray = [contentLinkString, mediaFileString]
+    let linkList = parseArray(linkArray);
+    let formattedLinkList = assignLinkList(linkList);
+    let linkString = '<ul class="contactList d-flex flex-column flex-md-row justify-content-start p-0">' + formattedLinkList + '</ul>';
      
     
     
@@ -352,14 +387,13 @@ try {
             imageString,
             closeImageWrapper,
             openDescriptionWrapper,
-            linkString,
             subtitleString,
             descriptionString,
             closeDescriptionWrapper,
             closeRow,
             closeBody,
             openFooter,
-            mediaFileString,
+            linkString,
             topicString,
             lastModifiedString,
             closeFooter,
