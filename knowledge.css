@@ -69,7 +69,7 @@
     padding: 0;
 }
 
-.knowledgeArticle .standardContent ul.linkList li:before {
+.knowledgeArticle .standardContent ul li:before {
     content: none;
 }
 
