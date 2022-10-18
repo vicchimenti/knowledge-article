@@ -390,7 +390,6 @@ try {
             imageString,
             closeImageWrapper,
             openDescriptionWrapper,
-            testLinkString,
             subtitleString,
             descriptionString,
             closeDescriptionWrapper,
