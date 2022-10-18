@@ -367,8 +367,8 @@ try {
     let linkList = parseArray(linkArray);
     let formattedLinkList = assignLinkList(linkList);
     let linkString = (formattedLinkList) ?
-        '<ul class="contactList d-flex flex-column flex-md-row justify-content-start p-0">' + formattedLinkList + '</ul>' :
-        '<span class="contactList d-none hidden visually-hidden">No Links</span>';
+        '<ul class="linkList d-flex flex-column flex-md-row justify-content-start p-0">' + formattedLinkList + '</ul>' :
+        '<span class="linkList d-none hidden visually-hidden">No Links</span>';
      
     
     
