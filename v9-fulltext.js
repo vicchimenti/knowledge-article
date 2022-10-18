@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 7.1
+*     @version 7.2
 */
 
 
@@ -282,6 +282,17 @@ try {
 
 
     /***
+     *  Description
+     * 
+     * */
+    let fullBodyString = (knowledgeDict.articleFullBody.content) ?
+    '<div class="articleFullbody card-text">' + knowledgeDict.articleDescription.content + '</div>' :
+    '<span class="articleFullbody d-none hidden visually-hidden">No content entered</span>';
+
+
+
+
+    /***
      *  Subtitle subhead
      * 
      * */
@@ -402,6 +413,7 @@ try {
             linkString,
             topicString,
             lastModifiedString,
+            fullBodyString,
             closeFooter,
             endingHTML
         ]
