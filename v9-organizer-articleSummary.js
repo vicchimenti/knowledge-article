@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.15
+*     @version 6.2.16
 */
 
 
@@ -295,7 +295,7 @@ try {
      * */
     let contentLinkString = (knowledgeDict.linkSource.content && knowledgeDict.linkText.content) ?
         '<p class="externalLink card-text"><a href="' + knowledgeDict.linkSource.content + '" class="card-link" title="Visit the site: ' + knowledgeDict.linkText.content + '" target="_blank">' + knowledgeDict.linkText.content + '</a></p>' :
-        '<span class="externalLink d-none hidden visually-hidden">No link entered</span>';
+        null;
 
 
 
@@ -329,7 +329,7 @@ try {
      * 
      * */
      let mediaFileId = (knowledgeDict.mediaFile.content) ? content.get('Media File').getID() : null;
-     let mediaFileString = (mediaFileId) ? mediaTag(mediaFileId) : '<span class="d-none hidden visually-hidden">No File Provided</span>';
+     let mediaFileString = (mediaFileId) ? mediaTag(mediaFileId) : null;
 
 
 
