@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 7.3
+*     @version 7.4
 */
 
 
@@ -326,15 +326,15 @@ try {
 
 
     /***
-     *  Establish h3
+     *  Establish h1
      *  allow editors to hide the fulltext link when no full body exists
      * 
      * */
      let titleLink = (knowledgeDict.articleFullBody.content && knowledgeDict.fullTextLink.content && knowledgeDict.articleTitle.content) ?
-        '<h3 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link" title="Read more about ' + knowledgeDict.articleTitle.content + '">' + knowledgeDict.articleTitle.content + '</a></h3>' :
+        '<h1 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link" title="Read more about ' + knowledgeDict.articleTitle.content + '">' + knowledgeDict.articleTitle.content + '</a></h1>' :
         (knowledgeDict.articleTitle.content) ?
-        '<h3 class="card-title">' + knowledgeDict.articleTitle.content + '</h3>' :
-        '<h3 class="card-title">' + knowledgeDict.contentName.content + '</h3>';
+        '<h1 class="card-title">' + knowledgeDict.articleTitle.content + '</h1>' :
+        '<h1 class="card-title">' + knowledgeDict.contentName.content + '</h1>';
 
 
 
