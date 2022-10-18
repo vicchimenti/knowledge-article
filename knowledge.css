@@ -63,8 +63,19 @@
     font-weight: 400;
 }
 
+.knowledgeArticle .standardContent ul.linkList {
+    margin: 0;
+    padding: 0;
+}
+
 .knowledgeArticle .standardContent ul.linkList li:before {
     content: none;
+}
+
+.knowledgeArticle .linkListItem {
+    border: none;
+    display: inline-block;
+    padding: 10px 15px 10px 0;
 }
 
 
