@@ -13,6 +13,22 @@
     font-family: "Montserrat", sans-serif;
 }
 
+.knowledgeArticle .standardContent h1 {
+    color: #aa0000;
+}
+
+.knowledgeArticle .standardContent h1 a {
+    color: #aa0000;
+    text-decoration: none;
+}
+
+.knowledgeArticle .standardContent h1 a:focus {
+    text-decoration: underline;
+}
+
+.knowledgeArticle .standardContent h1 a:hover {
+    text-decoration: underline;
+}
 
 
 .knowledgeArticle .externalLink a {
