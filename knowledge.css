@@ -99,10 +99,11 @@
     background: #CC9F26;
     color: #fff;
     font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .knowledgeArticle .knowledgeBaseItem {
-    padding: 0 0 5px 0;
+    padding: 0;
 }
 
 
