@@ -92,7 +92,7 @@
 .knowledgeArticle .linkListItem {
     border: none;
     display: inline-block;
-    padding: 10px 15px 0 0;
+    padding: 0 15px 0 0;
 }
 
 .knowledgeArticle ul li.tag {
