@@ -1,3 +1,11 @@
+/***
+*   ZoneA Knowledge Article Styles
+*
+*/
+
+
+
+
 .knowledgeArticle.border-start {
     padding: 0 0 0 15px;
     border-left: 2px solid #04a9c5;
@@ -150,4 +158,131 @@
     margin: 15px 0 0 0;
     text-align: left;
     text-transform: initial;
+}
+
+
+
+
+/***
+*   Fulltext Styles
+*
+*/
+
+.knowledgeArticleItem.border-start {
+    padding: 0 0 0 15px;
+    border-left: 2px solid #04a9c5;
+    margin: 30px 0;
+}
+
+.knowledgeArticleItem p,
+.knowledgeArticleItem span,
+.knowledgeArticleItem a,
+.knowledgeArticleItem li,
+.knowledgeArticleItem h3,
+.knowledgeArticleItem h4 {
+    font-family: "Montserrat", sans-serif;
+}
+
+.knowledgeArticleItem .standardContent h1 {
+    color: #aa0000;
+}
+
+.knowledgeArticleItem .standardContent h1 a {
+    color: #aa0000;
+    text-decoration: none;
+}
+
+.knowledgeArticleItem .standardContent h1 a:focus {
+    text-decoration: underline;
+}
+
+.knowledgeArticleItem .standardContent h1 a:hover {
+    text-decoration: underline;
+}
+
+
+.knowledgeArticleItem .externalLink a {
+    color: #088099;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.knowledgeArticleItem .externalLink a:hover {
+    text-decoration: underline;
+}
+
+.knowledgeArticleItem .externalLink a:focus {
+    text-decoration: underline;
+}
+
+.knowledgeArticleItem a.mediaDownload  {
+    color: #EF4135;
+    /* font-size: 1.6rem; */
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.knowledgeArticleItem a.mediaDownload:hover {
+    text-decoration: underline;
+}
+
+.knowledgeArticleItem a.mediaDownload:focus {
+    text-decoration: underline;
+}
+
+.knowledgeArticleItem h4 {
+    padding-top: 15px;
+}
+
+.knowledgeArticleItem ul.categories {
+    margin: 0;
+} 
+
+.knowledgeArticleItem .standardContent img.card-img {
+    padding: 0;
+}
+
+.knowledgeArticleItem .lastModified p {
+    /* color: #777; */
+    color: #807060;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.knowledgeArticleItem .standardContent ul.linkList {
+    margin: 0;
+    padding: 0;
+}
+
+.knowledgeArticleItem .standardContent ul li:before {
+    content: none;
+}
+
+.knowledgeArticleItem .linkListItem {
+    border: none;
+    display: inline-block;
+    padding: 0 15px 0 0;
+}
+
+.knowledgeArticleItem ul li.tag {
+    background: #CC9F26;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.knowledgeArticleItem .knowledgeBaseItem {
+    padding: 0;
+}
+
+
+
+@media screen and (max-width: 991.99px) {
+    .knowledgeArticleItem.card {
+        padding-right: 15px;
+    }
+    .articleSummary.card-body {
+        padding-top: 1rem;
+    }
 }
