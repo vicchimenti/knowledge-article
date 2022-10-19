@@ -168,12 +168,6 @@
 *
 */
 
-.knowledgeArticleItem.border-start {
-    padding: 0 0 0 15px;
-    border-left: 2px solid #04a9c5;
-    margin: 30px 0;
-}
-
 .knowledgeArticleItem p,
 .knowledgeArticleItem span,
 .knowledgeArticleItem a,
