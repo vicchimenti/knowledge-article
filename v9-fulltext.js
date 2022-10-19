@@ -207,6 +207,7 @@
 
     /***
      *  Body wrapper funtion
+     *  wrappers are updated when there is no image
      * 
      * */
      function processBodyWrapper() {
