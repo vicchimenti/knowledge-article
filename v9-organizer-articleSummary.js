@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.24
+*     @version 6.2.25
 */
 
 
@@ -321,7 +321,7 @@ try {
      * 
      * */
      let titleLink = (knowledgeDict.articleFullBody.content && knowledgeDict.fullTextLink.content && knowledgeDict.articleTitle.content) ?
-        '<h3 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link" title="Read more about ' + knowledgeDict.articleTitle.content + '">' + knowledgeDict.articleTitle.content + '</a></h3>' :
+        '<h3 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link" title="Read more about: ' + knowledgeDict.articleTitle.content + '">' + knowledgeDict.articleTitle.content + '</a></h3>' :
         (knowledgeDict.articleTitle.content) ?
         '<h3 class="card-title">' + knowledgeDict.articleTitle.content + '</h3>' :
         '<h3 class="card-title">' + knowledgeDict.contentName.content + '</h3>';
