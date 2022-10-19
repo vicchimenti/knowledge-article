@@ -411,7 +411,7 @@ try {
   
     
   
-  } catch (err) {
+} catch (err) {
     document.write(err.message);
-  }
+}
   
