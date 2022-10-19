@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 7.4
+*     @version 7.4.1
 */
 
 
@@ -266,8 +266,8 @@ try {
      * 
      * */
     let beginningHTML = (knowledgeDict.articleTitle.content) ?
-        '<article class="knowledgeArticle card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + knowledgeDict.articleTitle.content + '" id="ka' + knowledgeDict.contentId.content + '"><div class="knowledgeItem standardContent">' :
-        '<article class="knowledgeArticle card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + knowledgeDict.contentName.content + '" id="ka' + knowledgeDict.contentId.content + '"><div class="knowledgeItem standardContent">' ;
+        '<article class="knowledgeArticleItem card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + knowledgeDict.articleTitle.content + '" id="ka' + knowledgeDict.contentId.content + '"><div class="knowledgeItem standardContent">' :
+        '<article class="knowledgeArticleItem card border-start border-top-0 border-bottom-0 border-end-0" aria-label="' + knowledgeDict.contentName.content + '" id="ka' + knowledgeDict.contentId.content + '"><div class="knowledgeItem standardContent">' ;
 
 
 
