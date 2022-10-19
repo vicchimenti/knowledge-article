@@ -30,7 +30,28 @@
      importClass(com.terminalfour.spring.ApplicationContextProvider);
      importClass(com.terminalfour.publish.utils.BrokerUtils);
      importClass(com.terminalfour.media.utils.ImageInfo);
- 
+
+
+
+
+    /***
+     *  Set defaults
+     * 
+     * */
+     let endingHTML = '</div></article>';
+     let openRow = '<div class="row g-0 px-0 mx-0">';
+     let closeRow = '</div>';
+     let openHeader = '<div class="card-header border-0 bg-transparent">';
+     let closeHeader = '</div>';
+     let openBody = '<div class="card-body">';
+     let closeBody = '</div>';
+     let openFooter = '<div class="card-footer border-0 bg-transparent">';
+     let closeFooter = '</div>';
+     let openImageWrapper = '<div class="knowledgeImage col-xs-12 col-md-4">';
+     let closeImageWrapper = '</div>';
+     let openDescriptionWrapper = '<div class="descriptionWrapper col-xs-12 col-md-8">';
+     let closeDescriptionWrapper = '</div>';
+
  
  
  
@@ -180,6 +201,20 @@
         return mediaHTML;
      }
 
+
+
+
+    /***
+     *  Body wrapper funtion
+     *  wrappers are updated when there is no image
+     * 
+     * */
+     function processBodyWrapper() {
+
+        openImageWrapper = '<div class="knowledgeImage d-none hidden visually-hidden">';
+        openDescriptionWrapper = '<div class="descriptionWrapper col-xs-12 col-md-12">';
+     }
+
  
  
  
@@ -222,39 +257,6 @@ try {
 
     };
 
-
-
-         
-    /***
-     *  Set defaults
-     * 
-     * */
-    let endingHTML = '</div></article>';
-    let openRow = '<div class="row g-0 px-0 mx-0">';
-    let closeRow = '</div>';
-    let openHeader = '<div class="card-header border-0 bg-transparent">';
-    let closeHeader = '</div>';
-    let openBody = '<div class="card-body">';
-    let closeBody = '</div>';
-    let openFooter = '<div class="card-footer border-0 bg-transparent">';
-    let closeFooter = '</div>';
-    let openImageWrapper = '<div class="knowledgeImage col-xs-12 col-md-4">';
-    let closeImageWrapper = '</div>';
-    let openDescriptionWrapper = '<div class="descriptionWrapper col-xs-12 col-md-8">';
-    let closeDescriptionWrapper = '</div>';
-
-
-
-
-    /***
-     *  Body wrapper funtion
-     * 
-     * */
-    function processBodyWrapper() {
-
-        openImageWrapper = '<div class="knowledgeImage d-none hidden visually-hidden">';
-        openDescriptionWrapper = '<div class="descriptionWrapper col-xs-12 col-md-12">';
-    }
 
 
 
