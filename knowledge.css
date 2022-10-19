@@ -179,6 +179,7 @@
 
 .knowledgeArticleItem .standardContent h1 {
     color: #aa0000;
+    margin-bottom: 15px;;
 }
 
 .knowledgeArticleItem .standardContent h1 a {
@@ -274,7 +275,6 @@
     border-top: 3px solid #e5e5e5;
     display: block;
     height: 3px;
-    margin: 0 20px 20px 20px;
 }
 
 
