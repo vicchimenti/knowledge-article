@@ -333,9 +333,7 @@ try {
      *  allow editors to hide the fulltext link when no full body exists
      * 
      * */
-     let titleLink = (knowledgeDict.articleFullBody.content && knowledgeDict.fullTextLink.content && knowledgeDict.articleTitle.content) ?
-        '<h1 class="card-title"><a href="' + knowledgeDict.fullTextLink.content + '" class="card-link" title="Read more about ' + knowledgeDict.articleTitle.content + '">' + knowledgeDict.articleTitle.content + '</a></h1>' :
-        (knowledgeDict.articleTitle.content) ?
+     let titleLink = (knowledgeDict.articleTitle.content) ?
         '<h1 class="card-title">' + knowledgeDict.articleTitle.content + '</h1>' :
         '<h1 class="card-title">' + knowledgeDict.contentName.content + '</h1>';
 
