@@ -101,7 +101,7 @@ $(function() {
                     let typeKey = $(this).val();
                     if (typeKey) {
 
-                        $('ul.list-group').filter(function(i, e) {
+                        $('ul.categories').filter(function(i, e) {
                             var typeValue = $(this).text();
                             if (typeValue.match(typeKey)) {
                                 $(this).parents('.knowledgeArticle').removeClass('hideByDropdownCategories');
