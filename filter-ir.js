@@ -1,24 +1,24 @@
-< script >
+{ /* < script > */ }
 
 
-    /***
-     *   @author Victor Chimenti, MSCS
-     *   @file filter.js
-     *   @see https://www.seattleu.edu/newsroom/experts/
-     *        Seattle University Newsroom Experts Application
-     *
-     *   @version 5.2.7
-     */
+/***
+ *   @author Victor Chimenti, MSCS
+ *   @file filter.js
+ *   @see https://www.seattleu.edu/newsroom/experts/
+ *        Seattle University Newsroom Experts Application
+ *
+ *   @version 5.2.7
+ */
 
 
 
 
-    /***
-     * Populate Dropdown Menu Select Option
-     * Currently using the T4 List Group Element
-     * 
-     */
-    const listItemsNode = document.querySelectorAll('li.list-group-item');
+/***
+ * Populate Dropdown Menu Select Option
+ * Currently using the T4 List Group Element
+ * 
+ */
+const listItemsNode = document.querySelectorAll('li.list-group-item');
 let select = document.getElementById("categoryOptions");
 let listItemsArr = []
 for (const item of listItemsNode) {
@@ -126,5 +126,4 @@ $(function() {
 });
 
 
-<
-/script>
+// </script>
