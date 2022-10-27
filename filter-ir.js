@@ -77,7 +77,7 @@ $(function() {
             //  ***   Keyword Search   ***   //
             $(function() {
 
-                $('#find-experts').on('keyup', function() {
+                $('#find-guides').on('keyup', function() {
 
                     let keyword = $(this).val().toLowerCase();
                     $(function() {
