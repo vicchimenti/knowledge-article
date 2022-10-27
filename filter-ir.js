@@ -7,7 +7,7 @@
  *   @see https://www.seattleu.edu/ir/
  *      InformSU Video Guides
  *      
- *   @version 6.0
+ *   @version 6.1
  * 
  */
 
