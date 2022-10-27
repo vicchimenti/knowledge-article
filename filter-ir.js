@@ -3,11 +3,12 @@
 
 /***
  *   @author Victor Chimenti, MSCS
- *   @file filter.js
- *   @see https://www.seattleu.edu/newsroom/experts/
- *        Seattle University Newsroom Experts Application
- *
- *   @version 5.2.7
+ *   @file filter-ir.js
+ *   @see https://www.seattleu.edu/ir/
+ *      InformSU Video Guides
+ *      
+ *   @version 6.0
+ * 
  */
 
 
