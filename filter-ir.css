@@ -62,6 +62,7 @@
 #filterField .form-group .form-control {
     font-size: 1.6rem;
     line-height: 1.5;
+    height: 46px;
 }
 
 .standardContent h2.organizerTitle {
