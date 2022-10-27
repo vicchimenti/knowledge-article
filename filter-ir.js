@@ -61,7 +61,7 @@ $(function() {
             //   ***   Process and Parse Visible Items   ***   //
             $(function() {
                 let parseItemsToDisplay = function() {
-                    visibleItems = $('.profileItem').not('.hideByDropdownCategories, .hideByText');
+                    visibleItems = $('.knowledgeArticle').not('.hideByDropdownCategories, .hideByText');
                     if (!visibleItems.length > 0) {
                         $('.noResultsToShow').removeClass('hideResultsMessage');
                     } else {
@@ -81,7 +81,7 @@ $(function() {
 
                     let keyword = $(this).val().toLowerCase();
                     $(function() {
-                        $('.profileItem').filter(function() {
+                        $('.knowledgeArticle').filter(function() {
                             $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                         });
                     });
@@ -104,15 +104,15 @@ $(function() {
                         $('ul.list-group').filter(function(i, e) {
                             var typeValue = $(this).text();
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.profileItem').removeClass('hideByDropdownCategories');
+                                $(this).parents('.knowledgeArticle').removeClass('hideByDropdownCategories');
                             } else {
-                                $(this).parents('.profileItem').addClass('hideByDropdownCategories');
+                                $(this).parents('.knowledgeArticle').addClass('hideByDropdownCategories');
                             }
                         });
 
                     } else {
 
-                        $('.profileItem').removeClass('hideByDropdownCategories');
+                        $('.knowledgeArticle').removeClass('hideByDropdownCategories');
                     }
 
                     parseItems.process();
