@@ -19,7 +19,7 @@
  * Currently using the T4 List Group Element
  * 
  */
-const listItemsNode = document.querySelectorAll('li.list-group-item');
+const listItemsNode = document.querySelectorAll('li.tag');
 let select = document.getElementById("categoryOptions");
 let listItemsArr = []
 for (const item of listItemsNode) {
