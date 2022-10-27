@@ -1,0 +1,91 @@
+/* Newsroom Experts Filter Field Customizations */
+
+#filterFieldWrapper {
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+#filterField {
+    padding: 0;
+}
+
+#filterField .row {
+    padding-top: 0.5rem;
+}
+
+#filterField.standardContent h2 {
+    color: #aa0000;
+    font-family: "Oswald", sans-serif;
+    font-size: 4.8rem;
+    font-weight: 100;
+    margin: 0;
+    max-width: unset;
+    padding-bottom: 1rem;
+    padding-top: 0;
+}
+
+#filterField.standardContent p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 0 0 0.5rem 0;
+}
+
+#filterField.standardContent ul {
+    line-height: 1.5;
+    padding: 0 0 0.5rem 0;
+}
+
+#filterField.standardContent li {
+    font-size: 1.6rem;
+    font-weight: 500;
+    list-style-type: unset;
+}
+
+#filterField.standardContent li a {
+    color: #088099;
+    border-bottom: unset;
+}
+
+#filterField.standardContent li a:hover {
+    color: #aa0000;
+    border-bottom: 2px solid #088099;
+    text-decoration: none;
+}
+
+#filterField .form-group {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+#filterField .form-group .form-control {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.standardContent h2.organizerTitle {
+    color: #aa0000;
+    font-family: "Oswald", sans-serif;
+    font-size: 3.8rem;
+    font-weight: 100;
+}
+
+.noResultsToShow {
+    background: #e3e3da;
+    padding: 30px;
+    margin: 15px;
+}
+
+.hideByDropdownCategories,
+.hideByText,
+.hideResultsMessage {
+    display: none !important;
+}
+
+@media screen and (max-width: 1199.98px) {
+    #filterFieldWrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
