@@ -24,7 +24,7 @@ let select = document.getElementById("categoryOptions");
 let listItemsArr = []
 for (const item of listItemsNode) {
 
-    listItemsArr.push(item.innerHTML);
+    listItemsArr.push(item.textContent);
 
 }
 
