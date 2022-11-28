@@ -13,7 +13,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 6.2.25
+*     @version 6.2.26
 */
 
 
@@ -373,6 +373,17 @@ try {
     let linkString = (formattedLinkList) ?
         '<ul class="linkList d-flex flex-column flex-md-row justify-content-start p-0 m-0">' + formattedLinkList + '</ul>' :
         '<span class="linkList d-none hidden visually-hidden">No Links</span>';
+
+
+
+
+    /***
+     *  Hidden filter search content
+     * 
+     * */
+     let hiddenString = (knowledgeDict.articleFullBody.content) ?
+     '<div class="hidden visually-hidden d-none"><span class="fullbody hidden visually-hidden d-none">' + knowledgeDict.articleFullBody.content + '</span></div>' :
+     '<span class="fullbody hidden visually-hidden d-none"></span>';        
      
     
     
@@ -403,6 +414,7 @@ try {
             linkString,
             topicString,
             lastModifiedString,
+            hiddenString,
             closeFooter,
             endingHTML
         ]
